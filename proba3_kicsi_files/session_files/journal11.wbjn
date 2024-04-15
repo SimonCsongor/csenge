@@ -1,0 +1,57 @@
+# encoding: utf-8
+# 2023 R2
+SetScriptVersion(Version="23.2.142")
+system1 = GetSystem(Name="CFX 1")
+solution1 = system1.GetContainer(ComponentName="Solution")
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = On
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX_007.res
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Parallel Host List = csongor-pc*6
+        Start Method = Intel MPI Distributed Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1 = system1.GetComponent(Name="Solution")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+Save(Overwrite=True)

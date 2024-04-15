@@ -1,0 +1,842 @@
+# encoding: utf-8
+# 2023 R2
+SetScriptVersion(Version="23.2.142")
+system1 = GetSystem(Name="TS 3")
+turboMesh1 = system1.GetContainer(ComponentName="Turbo Mesh")
+turboMesh1.Edit()
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 3.73753
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 1.2
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.75816
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 51.928
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0178062 [m]
+  Hub Vertex Offset = 0.000890309
+  Hub Vertex YPlus = 5
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.75816
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0178062 [m]
+  Shroud Vertex Offset = 0.000890309
+  Shroud Vertex YPlus = 5
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 3.73753
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+Save(Overwrite=True)
+turboMesh1.Exit()
+system2 = GetSystem(Name="CFX 1")
+setup1 = system2.GetContainer(ComponentName="Setup")
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 51.6741, 69.3977, -9.99997
+    Scale = 0.00736427
+    Pan = 0, 0
+    Rotation Quaternion = -0.420958, -0.880823, 0.210399, -0.0517957
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   SOLVER CONTROL: 
+    Turbulence Numerics = First Order
+    ADVECTION SCHEME: 
+      Option = Upwind
+    END # ADVECTION SCHEME:
+    CONVERGENCE CONTROL: 
+      Length Scale Option = Conservative
+      Maximum Number of Iterations = 500
+      Minimum Number of Iterations = 1
+      Timescale Control = Auto Timescale
+      Timescale Factor = 0.2
+    END # CONVERGENCE CONTROL:
+    CONVERGENCE CRITERIA: 
+      Residual Target = 1e-6
+      Residual Type = RMS
+    END # CONVERGENCE CRITERIA:
+    DYNAMIC MODEL CONTROL: 
+      Global Dynamic Model Control = On
+    END # DYNAMIC MODEL CONTROL:
+    INTERRUPT CONTROL: 
+      Option = Any Interrupt
+      CONVERGENCE CONDITIONS: 
+        Option = Default Conditions
+      END # CONVERGENCE CONDITIONS:
+    END # INTERRUPT CONTROL:
+  END # SOLVER CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   SOLVER CONTROL: 
+    Turbulence Numerics = First Order
+    ADVECTION SCHEME: 
+      Option = Upwind
+    END # ADVECTION SCHEME:
+    CONVERGENCE CONTROL: 
+      Length Scale Option = Conservative
+      Maximum Number of Iterations = 500
+      Minimum Number of Iterations = 100
+      Timescale Control = Auto Timescale
+      Timescale Factor = 0.2
+    END # CONVERGENCE CONTROL:
+    CONVERGENCE CRITERIA: 
+      Residual Target = 1e-6
+      Residual Type = RMS
+    END # CONVERGENCE CRITERIA:
+    DYNAMIC MODEL CONTROL: 
+      Global Dynamic Model Control = On
+    END # DYNAMIC MODEL CONTROL:
+    INTERRUPT CONTROL: 
+      Option = Any Interrupt
+      CONVERGENCE CONDITIONS: 
+        Option = Default Conditions
+      END # CONVERGENCE CONDITIONS:
+    END # INTERRUPT CONTROL:
+  END # SOLVER CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup1.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   SOLVER CONTROL: 
+    Turbulence Numerics = First Order
+    ADVECTION SCHEME: 
+      Option = Upwind
+    END # ADVECTION SCHEME:
+    CONVERGENCE CONTROL: 
+      Length Scale Option = Conservative
+      Maximum Number of Iterations = 500
+      Minimum Number of Iterations = 100
+      Timescale Control = Auto Timescale
+      Timescale Factor = 0.2
+    END # CONVERGENCE CONTROL:
+    CONVERGENCE CRITERIA: 
+      Residual Target = 1e-6
+      Residual Type = RMS
+    END # CONVERGENCE CRITERIA:
+    DYNAMIC MODEL CONTROL: 
+      Global Dynamic Model Control = On
+    END # DYNAMIC MODEL CONTROL:
+    INTERRUPT CONTROL: 
+      Option = Any Interrupt
+      CONVERGENCE CONDITIONS: 
+        Option = Default Conditions
+      END # CONVERGENCE CONDITIONS:
+    END # INTERRUPT CONTROL:
+  END # SOLVER CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+Save(Overwrite=True)
+setup1.Exit()
+solution1 = system2.GetContainer(ComponentName="Solution")
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = On
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 6
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1 = system2.GetComponent(Name="Solution")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+solutionComponent1.Clean()
+solutionComponent1.Clean()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = On
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 6
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+solutionComponent1.Clean()
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 51.6741, 69.3977, -9.99997
+    Scale = 0.00736427
+    Pan = 0, 0
+    Rotation Quaternion = -0.420958, -0.880823, 0.210399, -0.0517957
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   SOLVER CONTROL: 
+    Turbulence Numerics = First Order
+    ADVECTION SCHEME: 
+      Option = Upwind
+    END # ADVECTION SCHEME:
+    CONVERGENCE CONTROL: 
+      Length Scale Option = Conservative
+      Maximum Number of Iterations = 1000
+      Minimum Number of Iterations = 500
+      Timescale Control = Auto Timescale
+      Timescale Factor = 0.1
+    END # CONVERGENCE CONTROL:
+    CONVERGENCE CRITERIA: 
+      Residual Target = 1e-6
+      Residual Type = RMS
+    END # CONVERGENCE CRITERIA:
+    DYNAMIC MODEL CONTROL: 
+      Global Dynamic Model Control = On
+    END # DYNAMIC MODEL CONTROL:
+    INTERRUPT CONTROL: 
+      Option = Any Interrupt
+      CONVERGENCE CONDITIONS: 
+        Option = Default Conditions
+      END # CONVERGENCE CONDITIONS:
+    END # INTERRUPT CONTROL:
+  END # SOLVER CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+Save(Overwrite=True)
+setup1.Exit()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 7
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+solutionComponent1.Clean()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 7
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+solutionComponent1.Clean()
+solution1.SetExecutionControl(CCL="")
+solutionComponent1.Reset()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Parallel Host List = csongor-pc*6
+        Start Method = Intel MPI Distributed Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+solutionComponent1.Reset()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = On
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Parallel Host List = csongor-pc*6
+        Start Method = Intel MPI Distributed Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+turboMesh1.Edit()
+turboMesh1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = -12.5277, 59.1163, -10
+    Scale = 0.0137118
+    Pan = 25.6619, 33.8646
+    Rotation Quaternion = 0.0382265, 0.0375992, -0.938294, 0.341703
+    
+  END
+
+END
+
+> update
+> um mode=suspend, object=/TOPOLOGY SET""")
+turboMesh1.SendCommand(Command="> um mode=normal, object=/TOPOLOGY SET")
+turboMesh1.Exit()
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 51.6741, 69.3977, -9.99997
+    Scale = 0.00736427
+    Pan = 0, 0
+    Rotation Quaternion = -0.420958, -0.880823, 0.210399, -0.0517957
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+MESH TRANSFORMATION:
+Angle End = 0 , 0 , 0 
+Angle Start = 0 , 0 , 0 
+Delete Original = Off
+Glue Copied = On
+Glue Reflected = On
+Glue Strategy = Location And Transformed Only
+Nonuniform Scale = 1 , 1 , 1 
+Normal = 0 , 0 , 0 
+Number of Copies = 1
+Option = Scale
+Passages in 360 = 1
+Passages per Mesh = 1
+Passages to Model = 1
+Point = 0 , 0 , 0 
+Point 1 = 0 , 0 , 0 
+Point 2 = 0 , 0 , 0 
+Point 3 = 0 , 0 , 0 
+Preserve Assembly Name Strategy = Existing
+Principal Axis = Z
+Reflection Method = Original (No Copy)
+Reflection Option = YZ Plane
+Rotation Angle = 0.0 [degree]
+Rotation Angle Option = Specified
+Rotation Axis Begin = 0 , 0 , 0 
+Rotation Axis End = 0 , 0 , 0 
+Rotation Option = Principal Axis
+Scale Method = Original (No Copy)
+Scale Option = Uniform
+Scale Origin = 0 , 0 , 0 
+Target Location = Passage Main
+Theta Offset = 0.0 [degree]
+Transform Targets Independently = Off
+Translation Deltas = 0 , 0 , 0 
+Translation Option = Deltas
+Translation Root = 0 , 0 , 0 
+Translation Tip = 0 , 0 , 0 
+Uniform Scale = 1.0
+Use Coord Frame = Off
+Use Multiple Copy = Off
+X Pos = 0.0
+Y Pos = 0.0
+Z Pos = 0.0
+END
+> update
+>gtmTransform Passage Main""")
+setup1.SendCommand(Command="""MESH TRANSFORMATION:
+Angle End = 0 , 0 , 0 
+Angle Start = 0 , 0 , 0 
+Delete Original = Off
+Glue Copied = On
+Glue Reflected = On
+Glue Strategy = Location And Transformed Only
+Nonuniform Scale = 1 , 1 , 1 
+Normal = 0 , 0 , 0 
+Number of Copies = 1
+Option = Scale
+Passages in 360 = 4
+Passages per Mesh = 1
+Passages to Model = 1
+Point = 0 , 0 , 0 
+Point 1 = 0 , 0 , 0 
+Point 2 = 0 , 0 , 0 
+Point 3 = 0 , 0 , 0 
+Preserve Assembly Name Strategy = Existing
+Principal Axis = Z
+Reflection Method = Original (No Copy)
+Reflection Option = YZ Plane
+Rotation Angle = 0.0 [degree]
+Rotation Angle Option = Specified
+Rotation Axis Begin = 0 , 0 , 0 
+Rotation Axis End = 0 , 0 , 0 
+Rotation Option = Principal Axis
+Scale Method = Original (No Copy)
+Scale Option = Uniform
+Scale Origin = 0 , 0 , 0 
+Target Location = Passage Main
+Theta Offset = 0.0 [degree]
+Transform Targets Independently = Off
+Translation Deltas = 0 , 0 , 0 
+Translation Option = Deltas
+Translation Root = 0 , 0 , 0 
+Translation Tip = 0 , 0 , 0 
+Uniform Scale = 0.001
+Use Coord Frame = Off
+Use Multiple Copy = Off
+X Pos = 0.0
+Y Pos = 0.0
+Z Pos = 0.0
+END
+> update
+>gtmTransform Passage Main""")
+Save(Overwrite=True)
+setup1.Exit()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = On
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Parallel Host List = csongor-pc*6
+        Start Method = Intel MPI Distributed Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+solutionComponent1.Update(Force=True)
+Save(Overwrite=True)
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = On
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX_003.res
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Parallel Host List = csongor-pc*6
+        Start Method = Intel MPI Distributed Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)

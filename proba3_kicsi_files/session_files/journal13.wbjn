@@ -1,0 +1,17 @@
+# encoding: utf-8
+# 2023 R2
+SetScriptVersion(Version="23.2.142")
+system1 = GetSystem(Name="TS 1")
+turboMeshComponent1 = system1.GetComponent(Name="Turbo Mesh")
+turboMeshComponent1.Clean()
+system2 = GetSystem(Name="CFX")
+CleanSystem(Systems=[system2])
+setupComponent1 = system2.GetComponent(Name="Setup")
+setupComponent1.Clean()
+system3 = GetSystem(Name="TS 3")
+CleanSystem(Systems=[system3])
+system4 = GetSystem(Name="CFX 1")
+CleanSystem(Systems=[system4])
+system5 = GetSystem(Name="TS 2")
+CleanSystem(Systems=[system5])
+Save(Overwrite=True)

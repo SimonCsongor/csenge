@@ -1,0 +1,2321 @@
+# encoding: utf-8
+# 2023 R2
+SetScriptVersion(Version="23.2.142")
+system1 = GetSystem(Name="CFX")
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.Edit()
+system2 = GetSystem(Name="CFX 1")
+setup2 = system2.GetContainer(ComponentName="Setup")
+setup2.Edit()
+setup2.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 51.6636, 69.3863, -9.99952
+    Scale = 0.00736216
+    Pan = 0, 0
+    Rotation Quaternion = -0.420958, -0.880823, 0.210399, -0.0517957
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   SOLVER CONTROL: 
+    Turbulence Numerics = First Order
+    ADVECTION SCHEME: 
+      Option = Upwind
+    END # ADVECTION SCHEME:
+    CONVERGENCE CONTROL: 
+      Length Scale Option = Conservative
+      Maximum Number of Iterations = 500
+      Minimum Number of Iterations = 1
+      Timescale Control = Auto Timescale
+      Timescale Factor = 0.2
+    END # CONVERGENCE CONTROL:
+    CONVERGENCE CRITERIA: 
+      Residual Target = 1e-6
+      Residual Type = RMS
+    END # CONVERGENCE CRITERIA:
+    DYNAMIC MODEL CONTROL: 
+      Global Dynamic Model Control = On
+    END # DYNAMIC MODEL CONTROL:
+    INTERRUPT CONTROL: 
+      Option = Any Interrupt
+      CONVERGENCE CONDITIONS: 
+        Option = Default Conditions
+      END # CONVERGENCE CONDITIONS:
+    END # INTERRUPT CONTROL:
+  END # SOLVER CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+Save(Overwrite=True)
+setup2.Exit()
+solution1 = system2.GetContainer(ComponentName="Solution")
+solution1.Exit()
+system3 = GetSystem(Name="TS 3")
+turboMesh1 = system3.GetContainer(ComponentName="Turbo Mesh")
+turboMesh1.Edit()
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 2.2159
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 0.6
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.75816
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 51.928
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0178062 [m]
+  Hub Vertex Offset = 0.000890309
+  Hub Vertex YPlus = 5
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.75816
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0178062 [m]
+  Shroud Vertex Offset = 0.000890309
+  Shroud Vertex YPlus = 5
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 2.2159
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 5.13882
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 0.6
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.75816
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 51.928
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0178062 [m]
+  Hub Vertex Offset = 0.000890309
+  Hub Vertex YPlus = 5
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.75816
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0178062 [m]
+  Shroud Vertex Offset = 0.000890309
+  Shroud Vertex YPlus = 5
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 5.13882
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+Save(Overwrite=True)
+turboMesh1.Exit()
+setupComponent1 = system2.GetComponent(Name="Setup")
+setupComponent1.Refresh()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = On
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 7
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1 = system2.GetComponent(Name="Solution")
+solutionComponent1.Update(Force=True)
+turboMesh1.Edit()
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 5.13882
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 1
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.75816
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 51.928
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0178062 [m]
+  Hub Vertex Offset = 0.000890309
+  Hub Vertex YPlus = 5
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.75816
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0178062 [m]
+  Shroud Vertex Offset = 0.000890309
+  Shroud Vertex YPlus = 5
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 5.13882
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+Save(Overwrite=True)
+Save(Overwrite=True)
+turboMesh1.Exit()
+solution1.Exit()
+setup2.Edit()
+setup1.Exit()
+setup1.Edit()
+Save(Overwrite=True)
+setup1.Exit()
+setup2.Exit()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 7
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+setup2.Edit()
+setup2.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 51.6915, 69.3899, -9.99962
+    Scale = 0.00736514
+    Pan = 0, 0
+    Rotation Quaternion = -0.420958, -0.880823, 0.210399, -0.0517957
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   SOLVER CONTROL: 
+    Turbulence Numerics = First Order
+    ADVECTION SCHEME: 
+      Option = Upwind
+    END # ADVECTION SCHEME:
+    CONVERGENCE CONTROL: 
+      Length Scale Option = Conservative
+      Maximum Number of Iterations = 1000
+      Minimum Number of Iterations = 1
+      Timescale Control = Auto Timescale
+      Timescale Factor = 0.2
+    END # CONVERGENCE CONTROL:
+    CONVERGENCE CRITERIA: 
+      Residual Target = 1e-6
+      Residual Type = RMS
+    END # CONVERGENCE CRITERIA:
+    DYNAMIC MODEL CONTROL: 
+      Global Dynamic Model Control = On
+    END # DYNAMIC MODEL CONTROL:
+    INTERRUPT CONTROL: 
+      Option = Any Interrupt
+      CONVERGENCE CONDITIONS: 
+        Option = Default Conditions
+      END # CONVERGENCE CONDITIONS:
+    END # INTERRUPT CONTROL:
+  END # SOLVER CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup2.SendCommand(Command="""FLOW: Flow Analysis 1
+&replace   SOLVER CONTROL: 
+    Turbulence Numerics = First Order
+    ADVECTION SCHEME: 
+      Option = Upwind
+    END # ADVECTION SCHEME:
+    CONVERGENCE CONTROL: 
+      Length Scale Option = Conservative
+      Maximum Number of Iterations = 1000
+      Minimum Number of Iterations = 1
+      Timescale Control = Auto Timescale
+      Timescale Factor = 0.2
+    END # CONVERGENCE CONTROL:
+    CONVERGENCE CRITERIA: 
+      Residual Target = 1e-6
+      Residual Type = RMS
+    END # CONVERGENCE CRITERIA:
+    DYNAMIC MODEL CONTROL: 
+      Global Dynamic Model Control = On
+    END # DYNAMIC MODEL CONTROL:
+    INTERRUPT CONTROL: 
+      Option = Any Interrupt
+      CONVERGENCE CONDITIONS: 
+        Option = Default Conditions
+      END # CONVERGENCE CONDITIONS:
+    END # INTERRUPT CONTROL:
+  END # SOLVER CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+setup2.Exit()
+turboMesh1.Edit()
+turboMesh1.Exit()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 7
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+solutionComponent1.Clean()
+solutionComponent1.Clean()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = Off
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 7
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+solutionComponent1.Clean()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = On
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 7
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+setup2.Edit()
+Save(Overwrite=True)
+setup2.Exit()
+turboMesh1.Edit()
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 3.73753
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 1
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.75816
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 51.928
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0178062 [m]
+  Hub Vertex Offset = 0.000890309
+  Hub Vertex YPlus = 10
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.75816
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0178062 [m]
+  Shroud Vertex Offset = 0.000890309
+  Shroud Vertex YPlus = 10
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 3.73753
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 3.73753
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 1
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.5874
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 25.3981
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0356124 [m]
+  Hub Vertex Offset = 0.00178062
+  Hub Vertex YPlus = 10
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.5874
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0356124 [m]
+  Shroud Vertex Offset = 0.00178062
+  Shroud Vertex YPlus = 10
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 3.73753
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 3.73753
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 1
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.5874
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 25.3981
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0356124 [m]
+  Hub Vertex Offset = 0.00178062
+  Hub Vertex YPlus = 10
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.5874
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0356124 [m]
+  Shroud Vertex Offset = 0.00178062
+  Shroud Vertex YPlus = 10
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 3.73753
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 3.73753
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 1
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.5874
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 25.3981
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0356124 [m]
+  Hub Vertex Offset = 0.00178062
+  Hub Vertex YPlus = 10
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.5874
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0356124 [m]
+  Shroud Vertex Offset = 0.00178062
+  Shroud Vertex YPlus = 10
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 3.73753
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 3.73753
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 1
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.5874
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 25.3981
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0356124 [m]
+  Hub Vertex Offset = 0.00178062
+  Hub Vertex YPlus = 10
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.5874
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0356124 [m]
+  Shroud Vertex Offset = 0.00178062
+  Shroud Vertex YPlus = 10
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 3.73753
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 3.73753
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 1
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.5874
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 25.3981
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0356124 [m]
+  Hub Vertex Offset = 0.00178062
+  Hub Vertex YPlus = 10
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.5874
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0356124 [m]
+  Shroud Vertex Offset = 0.00178062
+  Shroud Vertex YPlus = 10
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 3.73753
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 3.73753
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 1
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.5874
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 25.3981
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0356124 [m]
+  Hub Vertex Offset = 0.00178062
+  Hub Vertex YPlus = 10
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.5874
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0356124 [m]
+  Shroud Vertex Offset = 0.00178062
+  Shroud Vertex YPlus = 10
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 3.73753
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 3.73753
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 1
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.5874
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 25.3981
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0356124 [m]
+  Hub Vertex Offset = 0.00178062
+  Hub Vertex YPlus = 10
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.5874
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0356124 [m]
+  Shroud Vertex Offset = 0.00178062
+  Shroud Vertex YPlus = 10
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 3.73753
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 3.73753
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 1.5
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.5874
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 25.3981
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0356124 [m]
+  Hub Vertex Offset = 0.00178062
+  Hub Vertex YPlus = 10
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.5874
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0356124 [m]
+  Shroud Vertex Offset = 0.00178062
+  Shroud Vertex YPlus = 10
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 3.73753
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+turboMesh1.SendCommand(Command="""MESH DATA:
+  ATM Constant First Element Offset = On
+  ATM Five Star Vertex Mesh Size Factor = 1.0
+  ATM Proportional BL Factor Base = 2.74643
+  ATM Proportional BL Factor Ratio = 0.0
+  ATM Spanwise To B2B Count Factor = 1.0
+  Between Boundary Layers Distribution Option = End Ratio
+  Between Boundary Layers End Ratio = 1
+  Between Boundary Layers Number Of Const Elements = 4
+  Between Boundary Layers Number Of Elements = 17
+  Boundary Layer Specification Method = Target First Element Offset
+  Global Size Factor = 1.5
+  HGrid At Inlet = on
+  HGrid At Outlet = on
+  HGrid in Parametric Space at Inlet = Off
+  HGrid in Parametric Space at Outlet = Off
+  High Fidelity Hub Tip Interface Size Mode = Size Factor
+  High Fidelity Shroud Tip Interface Size Mode = Size Factor
+  Hub Boundary Layer Distribution Option = Element Count and Size
+  Hub Boundary Layer Expansion Rate = 1.5874
+  Hub Boundary Layer Number Of Elements = 7
+  Hub Boundary Layer Offset = 0.1
+  Hub End Ratio = 25.3981
+  Hub Tip Distribution Option = End Ratio
+  Hub Tip End Ratio = 15
+  Hub Tip Vertex Distance = 0.01 [m]
+  Hub Tip Vertex Offset = 0.1
+  Hub Tip Vertex YPlus = 1
+  Hub Vertex Distance = 0.0356124 [m]
+  Hub Vertex Offset = 0.00178062
+  Hub Vertex YPlus = 10
+  Inlet Default Growth Ratio = 1.2
+  Inlet Defining Parameter Type = Target Expansion Rate
+  Inlet Domain = Off
+  Inlet Max Aspect Ratio = 900
+  Inlet Multi Segment Enabled = On
+  Inlet Multi Segment First Element Factor = 0.1
+  LE Cutoff Edge Split Factor = 1.0
+  Meridional Splitter Boundary Layer Factor = 1.0
+  Mesh Size Specification Mode = Topology Block Edge Split
+  Number Of Constant Hub Tip Elements = 0
+  Number Of Constant Shroud Tip Elements = 0
+  Number Of Constant Spanwise Blade Elements = 20
+  Number Of Elements Per Block Edge = 2
+  Number Of Hub Tip Elements = 4
+  Number Of Inlet Elements = 5
+  Number Of Outlet Elements = 5
+  Number Of Shroud Tip Elements = 4
+  Number Of Spanwise Blade Elements = 30
+  Outlet Default Growth Ratio = 1.2
+  Outlet Defining Parameter Type = Target Expansion Rate
+  Outlet Domain = Off
+  Outlet Max Aspect Ratio = 900
+  Outlet Multi Segment Enabled = On
+  Outlet Multi Segment First Element Factor = 0.1
+  Override Inlet Distribution = Off
+  Override Outlet Distribution = Off
+  Reynolds Number = 1.0e6
+  Shroud Boundary Layer Distribution Option = Element Count and Size
+  Shroud Boundary Layer Expansion Rate = 1.5874
+  Shroud Boundary Layer Number Of Elements = 7
+  Shroud Boundary Layer Offset = 0.1
+  Shroud Tip Distribution Option = End Ratio
+  Shroud Tip End Ratio = 15
+  Shroud Tip Vertex Distance = 0.01 [m]
+  Shroud Tip Vertex Offset = 0.1
+  Shroud Tip Vertex YPlus = 1
+  Shroud Vertex Distance = 0.0356124 [m]
+  Shroud Vertex Offset = 0.00178062
+  Shroud Vertex YPlus = 10
+  Spanwise Blade Distribution Option = Element Count and Size
+  TE Cutoff Edge Split Factor = 1.0
+  Target Maximum Expansion Rate = 1.3
+  Target Maximum Expansion Rate Enabled = On
+  Target Mesh Granularity = Coarse
+  Target Mesh Node Count = 500000
+  Vertex Offset Specification Mode = y+
+  BLADE MESH DATA: Blade 1
+    ATM Hub Tip Maximum Expansion Rate = 1.3
+    ATM Hub Tip Maximum Expansion Rate Enabled = Off
+    ATM Shroud Tip Maximum Expansion Rate = 1.3
+    ATM Shroud Tip Maximum Expansion Rate Enabled = Off
+    Cutoff Blade Edge Expansion Factor = 0.5
+    GGI Tip Hub Le Cut Off MeanLine Method = Auto
+    GGI Tip Hub Te Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Le Cut Off MeanLine Method = Auto
+    GGI Tip Shroud Te Cut Off MeanLine Method = Auto
+    Number Of Elements Across Hub Tip = 0
+    Number Of Elements Across Shroud Tip = 0
+    Number Of Leading Edge Hub Tip Elements = 2
+    Number Of Leading Edge Shroud Tip Elements = 2
+    Number Of Trailing Edge Hub Tip Elements = 2
+    Number Of Trailing Edge Shroud Tip Elements = 2
+    Override Hub Tip Element Count Calculation = Off
+    Override Shroud Tip Element Count Calculation = Off
+  END
+  EDGE SPLIT CONTROL: Blade 1 Boundary Layer Control
+    Split Factor = 2.74643
+    Target First Element Offset = 0.0356124 [m]
+    Target First Element YPlus = 10
+  END
+END
+MESH DATA:
+  Override Outlet Element Count Calculation = 0
+  Outlet Default Growth Ratio = 1.2
+  Outlet Multi Segment Enabled = On
+END
+MESH DATA:
+  Override Inlet Element Count Calculation = 0
+  Inlet Default Growth Ratio = 1.2
+  Inlet Multi Segment Enabled = On
+END
+TOPOLOGY SET:
+  Lock Down ATM Mesh Size = Off
+END
+PARAMETERIZATION:
+END""")
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+turboMesh1.Exit()
+setupComponent1.Refresh()
+solutionComponent1.Clean()
+Save(Overwrite=True)
+solutionComponent1.Clean()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = On
+      Large Problem = On
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 7
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+setup2.Edit()
+setup2.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 51.6699, 69.388, -10
+    Scale = 0.00736299
+    Pan = 0, 0
+    Rotation Quaternion = -0.420958, -0.880823, 0.210399, -0.0517957
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+ROTATION MARKER: Marker R1
+  Visibility = true
+  Location = SHROUD
+  Rotation Speed = -1440 [rev min^-1]
+  AXIS DEFINITION:
+    Option = Coordinate Axis
+    Rotation Axis = Coord 0.3
+  END
+END""")
+setup2.SendCommand(Command="""AXIS: TurboPre
+  Option = Coord Frame
+  Visibility = true
+  Reference Coord Frame = Coord 0
+  Axis of Rotation = Z
+END""")
+setup2.SendCommand(Command=""">delete /FLOW:Flow Analysis 1/DOMAIN:R1,/FLOW:Flow Analysis 1/DOMAIN INTERFACE:R1 to R1 Periodic 1,/FLOW:Flow Analysis 1/ANALYSIS TYPE,/FLOW:Flow Analysis 1/OUTPUT CONTROL/MONITOR OBJECTS/EFFICIENCY OUTPUT,/FLOW:Flow Analysis 1/OUTPUT CONTROL/EFFICIENCY OUTPUT,/TURBO POST DATA,/FLOW:Flow Analysis 1/TRANSIENT BLADE ROW MODELS,/FLOW:Flow Analysis 1/OUTPUT CONTROL/TRANSIENT BLADE ROW OUTPUT
+FLOW: Flow Analysis 1
+  &replace DOMAIN INTERFACE: R1 to R1 Periodic 1
+    Filter Domain List1 = R1
+    Filter Domain List2 = R1
+    Interface Region List1 = PER1
+    Interface Region List2 = PER2
+    Interface Type = Fluid Fluid
+    INTERFACE MODELS:
+      Option = Rotational Periodicity
+      AXIS DEFINITION:
+        Option = Coordinate Axis
+        Rotation Axis = Coord 0.3
+      END
+    END
+    MESH CONNECTION:
+      Option = Automatic
+    END
+  END
+  &replace OUTPUT CONTROL:
+    RESULTS:
+      File Compression Level = Default
+      Option = Standard
+    END
+  END
+  &replace SOLUTION UNITS:
+    Angle Units = [rad]
+    Length Units = [m]
+    Mass Units = [kg]
+    Solid Angle Units = [sr]
+    Temperature Units = [K]
+    Time Units = [s]
+  END
+  &replace SOLVER CONTROL:
+    Turbulence Numerics = First Order
+    ADVECTION SCHEME:
+      Option = Upwind
+    END
+    CONVERGENCE CONTROL:
+      Length Scale Option = Conservative
+      Maximum Number of Iterations = 1000
+      Minimum Number of Iterations = 1
+      Timescale Control = Auto Timescale
+      Timescale Factor = 0.2
+    END
+    CONVERGENCE CRITERIA:
+      Residual Target = 1e-6
+      Residual Type = RMS
+    END
+    DYNAMIC MODEL CONTROL:
+      Global Dynamic Model Control = On
+    END
+    INTERRUPT CONTROL:
+      Option = Any Interrupt
+      CONVERGENCE CONDITIONS:
+        Option = Default Conditions
+      END
+    END
+  END
+  &replace ANALYSIS TYPE:
+    Option = Steady State
+    EXTERNAL SOLVER COUPLING:
+      Option = None
+    END
+  END
+  &replace DOMAIN: R1
+    Coord Frame = Coord 0
+    Domain Type = Fluid
+    Location = Passage Main
+    Number of Passages in 360 = 4
+    Number of Passages in Component = 1
+    BOUNDARY: R1 Blade
+      Boundary Type = WALL
+      Create Other Side = Off
+      Frame Type = Rotating
+      Interface Boundary = Off
+      Location = BLADE
+      BOUNDARY CONDITIONS:
+        MASS AND MOMENTUM:
+          Option = No Slip Wall
+        END
+        WALL ROUGHNESS:
+          Option = Smooth Wall
+        END
+      END
+    END
+    BOUNDARY: R1 Hub
+      Boundary Type = WALL
+      Create Other Side = Off
+      Frame Type = Rotating
+      Interface Boundary = Off
+      Location = HUB
+      BOUNDARY CONDITIONS:
+        MASS AND MOMENTUM:
+          Option = No Slip Wall
+        END
+        WALL ROUGHNESS:
+          Option = Smooth Wall
+        END
+      END
+    END
+    BOUNDARY: R1 Shroud
+      Boundary Type = WALL
+      Create Other Side = Off
+      Frame Type = Rotating
+      Interface Boundary = Off
+      Location = SHROUD
+      BOUNDARY CONDITIONS:
+        MASS AND MOMENTUM:
+          Option = No Slip Wall
+        END
+        WALL ROUGHNESS:
+          Option = Smooth Wall
+        END
+      END
+    END
+    DOMAIN MODELS:
+      BUOYANCY MODEL:
+        Option = Non Buoyant
+      END
+      DOMAIN MOTION:
+        Alternate Rotation Model = true
+        Angular Velocity = -1440 [rev min^-1]
+        Option = Rotating
+        AXIS DEFINITION:
+          Option = Coordinate Axis
+          Rotation Axis = Coord 0.3
+        END
+      END
+      MESH DEFORMATION:
+        Option = None
+      END
+      REFERENCE PRESSURE:
+        Reference Pressure = 1 [atm]
+      END
+    END
+    FLUID DEFINITION: Water
+      Material = Water
+      Option = Material Library
+      MORPHOLOGY:
+        Option = Continuous Fluid
+      END
+    END
+    FLUID MODELS:
+      COMBUSTION MODEL:
+        Option = None
+      END
+      HEAT TRANSFER MODEL:
+        Option = None
+      END
+      THERMAL RADIATION MODEL:
+        Option = None
+      END
+      TURBULENCE MODEL:
+        Option = SST
+      END
+      TURBULENT WALL FUNCTIONS:
+        Option = Automatic
+      END
+    END
+    BOUNDARY: R1 Inlet
+      Boundary Type = INLET
+      Frame Type = Stationary
+      Interface Boundary = Off
+      Location = INFLOW
+      BOUNDARY CONDITIONS:
+        FLOW DIRECTION:
+          Option = Normal to Boundary Condition
+        END
+        FLOW REGIME:
+          Option = Subsonic
+        END
+        MASS AND MOMENTUM:
+          Mass Flow Rate = 40 [kg s^-1]
+          Mass Flow Rate Area = Total for All Sectors
+          Option = Mass Flow Rate
+        END
+        TURBULENCE:
+          Option = Medium Intensity and Eddy Viscosity Ratio
+        END
+      END
+    END
+    BOUNDARY: R1 Outlet
+      Boundary Type = OUTLET
+      Frame Type = Stationary
+      Interface Boundary = Off
+      Location = OUTFLOW
+      BOUNDARY CONDITIONS:
+        FLOW REGIME:
+          Option = Subsonic
+        END
+        MASS AND MOMENTUM:
+          Option = Average Static Pressure
+          Pressure Profile Blend = 0.05
+          Relative Pressure = 1 [atm]
+        END
+        PRESSURE AVERAGING:
+          Option = Average Over Whole Outlet
+        END
+      END
+    END
+  END
+END
+
+>physicsupdate
+TURBO POST DATA:
+  Machine Type = Pump
+  Component Order = R1
+  Flow Type = Incompressible
+  Reference Pressure = 1 [atm]
+  Rotation Axis From = 0 [m], 0 [m], 0 [m]
+  Rotation Axis To = 0 [m], 0 [m], 1 [m]
+  TURBO POST COMPONENT: R1
+    Domain Name = R1
+    Domain Motion = Rotating
+    Number of Components in 360 = 4
+    Number of Passages in 360 = 4
+    Number of Passages in Component = 1
+    Complete Component = False
+    Blade Region = BLADE
+    Hub Region = HUB
+    Shroud Region = SHROUD
+    Inlet Region = INFLOW
+    Outlet Region = OUTFLOW
+    Periodic 1 Region = PER1
+    Periodic 2 Region = PER2
+  END
+END""")
+setup2.SendCommand(Command=">delete /AXIS:TurboPre")
+setup2.SendCommand(Command=">delete /ROTATION MARKER:Marker R1")
+Save(Overwrite=True)
+setup2.Exit()
+solutionComponent1.Clean()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = On
+      Large Problem = On
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Number of Processes = 7
+        Start Method = Intel MPI Local Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+Save(Overwrite=True)

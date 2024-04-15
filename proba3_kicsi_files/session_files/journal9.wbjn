@@ -1,0 +1,161 @@
+# encoding: utf-8
+# 2023 R2
+SetScriptVersion(Version="23.2.142")
+system1 = GetSystem(Name="CFX 1")
+solution1 = system1.GetContainer(ComponentName="Solution")
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = On
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX_004.res
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Parallel Host List = csongor-pc*6
+        Start Method = Intel MPI Distributed Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1 = system1.GetComponent(Name="Solution")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.Edit()
+setup1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+    Option = Pivot Point and Quaternion
+    Pivot Point = 0.0516742, 0.0693977, -0.00999897
+    Scale = 7.36425
+    Pan = 0, 0
+    Rotation Quaternion = -0.420958, -0.880823, 0.210399, -0.0517957
+    
+  END
+
+END
+
+VIEW:View 1
+  Light Angle = 50, 110
+END
+
+> update
+FLOW: Flow Analysis 1
+&replace   SOLVER CONTROL: 
+    Turbulence Numerics = High Resolution
+    ADVECTION SCHEME: 
+      Option = High Resolution
+    END # ADVECTION SCHEME:
+    CONVERGENCE CONTROL: 
+      Length Scale Option = Conservative
+      Maximum Number of Iterations = 1000
+      Minimum Number of Iterations = 500
+      Timescale Control = Auto Timescale
+      Timescale Factor = 1
+    END # CONVERGENCE CONTROL:
+    CONVERGENCE CRITERIA: 
+      Residual Target = 1e-6
+      Residual Type = RMS
+    END # CONVERGENCE CRITERIA:
+    DYNAMIC MODEL CONTROL: 
+      Global Dynamic Model Control = On
+    END # DYNAMIC MODEL CONTROL:
+    INTERRUPT CONTROL: 
+      Option = Any Interrupt
+      CONVERGENCE CONDITIONS: 
+        Option = Default Conditions
+      END # CONVERGENCE CONDITIONS:
+    END # INTERRUPT CONTROL:
+  END # SOLVER CONTROL:
+END # FLOW:Flow Analysis 1
+
+
+PARAMETERIZATION:
+END""")
+Save(Overwrite=True)
+setup1.Exit()
+solution1.SetExecutionControl(CCL=r"""&replace SIMULATION CONTROL:
+  EXECUTION CONTROL:
+    EXECUTABLE SELECTION:
+      Double Precision = On
+      Large Problem = Off
+    END
+    INTERPOLATOR STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+    END
+    PARTITIONER STEP CONTROL:
+      Multidomain Option = Automatic
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARTITION SMOOTHING:
+        Maximum Partition Smoothing Sweeps = 100
+        Option = Smooth
+      END
+      PARTITIONING TYPE:
+        MeTiS Type = k-way
+        Option = MeTiS
+        Partition Size Rule = Automatic
+      END
+    END
+    RUN DEFINITION:
+      Run Mode = Full
+      Solver Input File = D:\Asztal\DCsN\proba3_files\dp0\CFX-1\CFX\CFX.def
+    END
+    SOLVER STEP CONTROL:
+      Runtime Priority = Standard
+      MEMORY CONTROL:
+        Memory Allocation Factor = 1.0
+        Option = Model Based
+      END
+      PARALLEL ENVIRONMENT:
+        Parallel Host List = csongor-pc*6
+        Start Method = Intel MPI Distributed Parallel
+      END
+    END
+  END
+END
+""")
+solutionComponent1.Update(Force=True)
+solution1.Exit()
+Save(Overwrite=True)

@@ -1,0 +1,1596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Storage>
+  <Project Version="9.1">
+    <base-designpoint-name valType="String">0</base-designpoint-name>
+    <timestamp-max valType="Int64">9137</timestamp-max>
+    <framework-build-version valType="String">23.2.142.0</framework-build-version>
+    <external-version-string valType="String">2023 R2</external-version-string>
+    <last-saved-utc valType="String">04/15/2024 20:07:30</last-saved-utc>
+    <managed-categories valType="String">[report, misc, progress]</managed-categories>
+    <logHistory valType="StringArray">
+      <ArrayEntry Index="0">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents17056.log</ArrayEntry>
+      <ArrayEntry Index="1">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents16556.log</ArrayEntry>
+      <ArrayEntry Index="2">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents10428.log</ArrayEntry>
+      <ArrayEntry Index="3">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents16488.log</ArrayEntry>
+      <ArrayEntry Index="4">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents12004.log</ArrayEntry>
+      <ArrayEntry Index="5">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents19056.log</ArrayEntry>
+      <ArrayEntry Index="6">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents12372.log</ArrayEntry>
+      <ArrayEntry Index="7">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents7584.log</ArrayEntry>
+      <ArrayEntry Index="8">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents19520.log</ArrayEntry>
+      <ArrayEntry Index="9">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents24480.log</ArrayEntry>
+      <ArrayEntry Index="10">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents8668.log</ArrayEntry>
+      <ArrayEntry Index="11">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents17908.log</ArrayEntry>
+      <ArrayEntry Index="12">simoncsongor@CSONGOR-PC:C:\Users\winuser\AppData\Local\Temp\WorkbenchLogs\CoreEvents7760.log</ArrayEntry>
+    </logHistory>
+    <expression-scope-container valType="String">Parameters</expression-scope-container>
+    <project-type valType="String">WB2</project-type>
+    <project-id valType="String">6eef93c0-f567-4078-ae7a-569d5a795e9f</project-id>
+    <ReferenceCache>
+      <ProjectReferenceList>
+        <ReferenceList valType="String">{
+"97bb9ed4-0eca-4bc2-86d4-580693e74f49": "/FileTypesContainer/FileType:project",
+"70826d3e-c5eb-43e3-8639-b4b46f6c8d49": "/FileTypesContainer/FileType:ACTDatabase",
+"89dafc07-e122-4dff-9fb2-5ea0d595ab9a": "/Schematic/Template:Fluid Flow (CFX)",
+"be12b1e5-925b-4188-800e-fe4a02d8711e": "/Schematic/Template:Static Structural (ANSYS)",
+"e3554d08-6b6b-4439-874c-5531875ec659": "/Schematic/Template:Fluid Flow",
+"ac1c47ad-5eb1-4b7a-8c3e-1e344c13099a": "/Schematic/Template:Steady-State Thermal (ANSYS)",
+"547bfb0e-818b-4855-9986-cfcb3694484b": "/Schematic/Template:Modal (ANSYS)",
+"41049bf3-aecc-4bf4-accc-5fd762b4146e": "/Schematic/Template:Random Vibration (ANSYS)",
+"1660f959-b134-4b2b-90f9-0ffa63ff2bc3": "/Schematic/Template:Response Spectrum (ANSYS)",
+"df0bb257-1a31-4bf3-a4ff-2c4aabbdecae": "/Schematic/Template:Transient Thermal (ANSYS)",
+"4d2d3636-3311-4b88-87b3-84c8b210de0c": "/FileContainer/FileReference:F3",
+"ec213599-c6dd-4de5-8359-ac0b573b2abe": "/FileTypesContainer/FileType:BladeGen",
+"32d38b0f-d9cb-4ed0-9aac-e37d493713ae": "/Schematic/Component:Blade Design",
+"9c751144-eaed-46f0-8f36-cdfd956801b6": "/Schematic/Template:BladeGen",
+"2f7a0430-4c6e-47aa-b6f5-983206b969b2": "/Schematic/ComponentTemplate:TSGeometryTemplate",
+"b5a967a6-d358-471a-a740-e5d7070699fe": "/Schematic/System:BG",
+"d9fa7913-01ca-42f9-a9d4-9037c9f20802": "/FileContainer/FileReference:F4",
+"a4d3d9a0-4ad5-4fed-a151-a7563e44ff56": "/FileContainer/FileReference:F5",
+"e6c9f7d7-2113-41df-b6e9-61eab8567988": "/FileTypesContainer/FileType:TurboSystemInfo",
+"1f55ea7c-0fe7-4d97-91c4-1bc072a0f148": "/Schematic/System:TS",
+"69f3d7c3-2e6a-4eaf-8bde-398cf03de758": "/Schematic/Component:Turbo Mesh",
+"7c81e9af-5c06-4405-9ac8-9be8b69ac262": "/Schematic/Template:TurboGrid",
+"e1a1d3dd-4a86-434f-9def-61e70f8597c7": "/Schematic/Component:Blade Design 1",
+"e9aa9fa4-46ab-4ef3-aa0a-c419f74d4112": "/Schematic/ComponentTemplate:TSMeshTemplate",
+"e528890b-e311-4fcd-afe6-2c8d56412691": "/Schematic/System:BG 1",
+"8d0ef1fb-604a-4998-96a7-552a1eb6bfcc": "/FileContainer/FileReference:F6",
+"f28795b3-c45a-435f-aa10-eb2a8ef5603e": "/FileTypesContainer/FileType:default",
+"3e071240-8129-4dde-af61-0fe3ccfd62ed": "/Schematic/System:TS 1",
+"f78e1ef5-aa73-436a-9d33-824b86229186": "/Schematic/Component:Turbo Mesh 1",
+"81a2d322-f995-4140-ab38-6a185491bb3a": "/FileContainer/FileReference:F9",
+"4e3943e7-1b40-4ec9-871d-21ff1ee63c91": "/FileTypesContainer/FileType:CFXPreCase",
+"09cde9e4-f17b-4969-be72-5f523b6115a3": "/FileTypesContainer/FileType:CFXSolverInput",
+"79b26cd8-9b73-4653-9e0d-f83c27599c77": "/FileTypesContainer/FileType:CFXSolverOutput",
+"618275f3-26d8-4c0d-9476-95399bb7b7ed": "/Schematic/Component:Solution",
+"39781895-1834-458b-a376-e76bbd53435e": "/Schematic/System:CFX",
+"48685d33-da77-4195-9aca-6d06a00f996a": "/Schematic/Component:Setup",
+"8127be44-096d-4e9f-8705-df887a191402": "/Schematic/Component:Results",
+"4ae81db1-ebe3-4097-833a-1f9c9e824756": "/Schematic/Template:CFX",
+"31457915-0021-44d2-9ecf-d357f99b1b0a": "/Schematic/ComponentTemplate:CFXPhysicsTemplate",
+"19045437-41f3-4bbb-9b9c-1c01640ab970": "/Schematic/ComponentTemplate:CFXResultsTemplate",
+"894d6cd9-778d-456f-87ea-fd8970d12d47": "/Schematic/ComponentTemplate:CFDPostTemplate",
+"94ac404e-8b12-4289-9009-9b977787c91e": "/Schematic/Template:FLUENT",
+"f1ef8666-8588-4e49-bf7a-b1ef5670855f": "/Schematic/ComponentTemplate:FluentSetupCellTemplate",
+"f725b8ef-a18b-4325-909d-42ba724db74e": "/Schematic/ComponentTemplate:FluentResultsCellTemplate",
+"3a6b49b8-894f-42df-bc37-5070cfa80264": "/Schematic/Component:Turbo Mesh 2",
+"bfbe5a40-859d-4d21-9457-62c7867398cd": "/Schematic/System:TS 2",
+"d19a16c8-fb9b-4975-aee0-49c3c1cea09c": "/Schematic/System:BG 2",
+"ac921675-5c52-49dd-aacf-11baa4e78f94": "/Schematic/Component:Blade Design 2",
+"ea8ddd90-97ce-4327-b524-550d8dad05aa": "/FileContainer/FileReference:F69",
+"a1397805-c9a4-412d-9542-bf5b1d5ebcd2": "/FileTypesContainer/FileType:CFXSolverResults",
+"598b4c60-0001-4128-b3ef-b4dc7ab69e10": "/FileContainer/FileReference:F70",
+"866ddb74-0089-4936-b786-5dd5fe177248": "/Schematic/System:BG 3",
+"6bcf3bd2-4573-4724-ad3b-c3856601cae9": "/FileContainer/FileReference:F72",
+"63665863-0bf0-4507-8178-639940e73210": "/Schematic/Component:Turbo Mesh 3",
+"dc9b73ab-51cb-4e09-a5ab-10af176094dd": "/Schematic/Component:Blade Design 3",
+"539ef6c0-d4ac-43b9-aa95-dfbddfb9d02f": "/Schematic/System:TS 3",
+"a820ef21-d007-45ac-805a-5dd5a2d95185": "/FileContainer/FileReference:F73",
+"0799af81-c734-45c9-bb6c-9519a8759fee": "/FileContainer/FileReference:F76",
+"4b659fde-40da-4c80-aebf-6ca79730d5e0": "/Schematic/System:CFX 1",
+"0437e16e-7e87-46fa-a877-abfed2f7a277": "/Schematic/Component:Setup 1",
+"aa55535d-1d30-4ea4-a28b-4aa80d42c702": "/Schematic/Component:Solution 1",
+"6317cbec-2f3d-4cba-b024-77edf95799f3": "/Schematic/Component:Results 1",
+"5f028b56-f145-4184-9237-07e54d21f966": "/FileContainer/FileReference:F97",
+"af67be92-c5cf-4cc4-bb9e-bdcf922cb915": "/FileTypesContainer/FileType:CFDPostState"
+}</ReferenceList>
+      </ProjectReferenceList>
+      <DesignPointReferenceListCollection>
+        <DesignPointReferenceList Name="0">
+          <ReferenceList valType="String">{
+"12ab7b1f-3493-4167-8c17-6c11a100b9a7": "/Blade Design/TurboGeometryProperties:Blade Design Source",
+"81f343a7-2bfe-4e5a-9c9f-57a97bc46e86": "/Blade Design/TurboGeometry:Blade Design Provider",
+"e700c7d1-c7ab-4618-8738-d0e35e48ff63": "/Turbo Mesh/GeometryDataLink:Blade Design Provider",
+"470aa8b7-f25d-4b49-98ec-7e133c9f904b": "/Turbo Mesh/TurboMeshProperties:Turbo Mesh Source",
+"4e820bd3-09b7-42f0-8093-db0b917cbcee": "/Blade Design 1/TurboGeometryProperties:Blade Design 1 Source",
+"b9be2fb9-3ecd-4e07-bea8-a123ff4b0ed8": "/Blade Design 1/TurboGeometry:Blade Design 1 Provider",
+"7ed8c0b6-09e2-49b2-92a7-3228436447a0": "/Turbo Mesh 1/GeometryDataLink:Blade Design 1 Provider",
+"18fb90d2-7f3f-4bb9-a48c-81f848ccb202": "/Turbo Mesh 1/TurboMeshProperties:Turbo Mesh 1 Source",
+"c5148110-c34c-4844-b8a3-d825ebadf265": "/Turbo Mesh 1/CFXMesh:Turbo Mesh 1 Provider",
+"189c35a9-b120-4200-862e-cba83f5bc4b1": "/Setup/CFXMeshDataLink:Turbo Mesh 1 Provider",
+"995aa153-6deb-4daf-893c-48d3dce8a98c": "/Setup/CFXSetupProperties:Setup Source",
+"52d75cf3-46f4-4ece-8ecf-fbb550e05949": "/Setup/CFXSetup:Setup Provider",
+"dee62558-177c-4747-bcbb-06f6d8b43f69": "/Solution/CFXSetupDataLink:Setup Provider",
+"b177f81a-8be9-4849-bc16-c8eb0fe37137": "/Solution/CFXSolutionProperties:Solution Source",
+"9c80f0d1-a102-4d1f-a02e-75eb04a5e366": "/Solution/CFXSolution:Solution Provider",
+"95a3332f-566b-458a-adc8-64f0d7ab0e24": "/Results/SolutionDataLink:Solution Provider",
+"ac0c57f2-ba52-49dd-95c1-25b56883fdd2": "/Results/CFDResults:Results Source",
+"17f90da0-4345-4a48-b376-d89338fe0cdd": "/Turbo Mesh 1/FluentImportable:Turbo Mesh 1 Provider",
+"523d693f-7cbd-4079-b27c-f36d2a5cc822": "/Blade Design 2/TurboGeometryProperties:Blade Design 2 Source",
+"1b88ce00-c63e-42f6-8acf-f98aed3c9090": "/Blade Design 2/TurboGeometry:Blade Design 2 Provider",
+"27ebf9b5-9313-428b-9161-9670ddc6bf79": "/Turbo Mesh 2/GeometryDataLink:Blade Design 2 Provider",
+"5183219d-eff9-44b2-aeed-723e2a135cb3": "/Turbo Mesh 2/TurboMeshProperties:Turbo Mesh 2 Source",
+"f471bf11-cd4e-4678-96ed-7c40c86b0752": "/Blade Design 3/TurboGeometry:Blade Design 3 Provider",
+"b8a5789c-fa98-4e36-92b1-eac46eac3194": "/Turbo Mesh 3/GeometryDataLink:Blade Design 3 Provider",
+"72bc15d0-89ce-4fdb-a30c-b6e1e3eba46f": "/Turbo Mesh 3/TurboMeshProperties:Turbo Mesh 3 Source",
+"471f4c67-daca-4961-bda6-43148f200897": "/Blade Design 3/TurboGeometryProperties:Blade Design 3 Source",
+"6e6b9090-58ca-4367-a6ef-8836726812a8": "/Turbo Mesh 3/CFXMesh:Turbo Mesh 3 Provider",
+"1d733621-9535-4b7d-aba1-bbe5c83b7926": "/Setup 1/CFXMeshDataLink:Turbo Mesh 3 Provider",
+"d400e4ba-064f-41de-9968-63b6167d4874": "/Setup 1/CFXSetupProperties:Setup 1 Source",
+"8ab3d587-3536-43dc-831c-a59ada00f0c8": "/Setup 1/CFXSetup:Setup 1 Provider",
+"aaa71e95-5b3f-46ef-ae42-4623e10bda5e": "/Solution 1/CFXSetupDataLink:Setup 1 Provider",
+"ef32b97d-efd7-460a-adc9-2c9d3509eafa": "/Solution 1/CFXSolution:Solution 1 Provider",
+"172ad1e3-bb6c-4994-9812-deb8cf9b497f": "/Results 1/SolutionDataLink:Solution 1 Provider",
+"544ae3a5-eecd-4b6d-a61a-25efa7f1bdb0": "/Results 1/CFDResults:Results 1 Source",
+"49d6b997-d5dc-47dd-a3b3-821ff2705099": "/Solution 1/CFXSolutionProperties:Solution 1 Source"
+}</ReferenceList>
+        </DesignPointReferenceList>
+      </DesignPointReferenceListCollection>
+    </ReferenceCache>
+  </Project>
+  <Addins>
+    <addin-list valType="String">[Ansys.ParameterManager.ParameterManagerAddin, Ansys.ProjectSchematic.ProjectSchematicAddin, Ansys.ProjectReporting.Addin, Ansys.Graphics.GraphicsAddin, Ansys.Units.Commands.Addin, Ansys.ACT.WorkBench.Addin, Ansys.Dpdb.DpdbAddin, Ansys.Rep.RepAddin]</addin-list>
+    <Addin Name="Ansys.ParameterManager.ParameterManagerAddin" Version="7.3" />
+    <Addin Name="Ansys.ProjectSchematic.ProjectSchematicAddin" Version="13.2" />
+    <Addin Name="Ansys.ProjectReporting.Addin" Version="6.0" />
+    <Addin Name="Ansys.Graphics.GraphicsAddin" Version="1.1" />
+    <Addin Name="Ansys.Units.Commands.Addin" Version="7.1" />
+    <Addin Name="Ansys.ACT.WorkBench.Addin" Version="4.2">
+      <ExtensionsLoaded valType="StringArray">
+        <ArrayEntry Index="0">1;LSDYNA;5f463412-bd3e-484b-87e7-cbc0a665e474;LSDYNA;wbex;2023;2</ArrayEntry>
+        <ArrayEntry Index="1">1;ANSYSMotion;20180725-3f81-49eb-9f31-41364844c769;ANSYSMotion;wbex;2023;2</ArrayEntry>
+      </ExtensionsLoaded>
+    </Addin>
+    <Addin Name="Ansys.Dpdb.DpdbAddin" Version="4.2">
+      <is-optional-on-resume valType="Boolean">true</is-optional-on-resume>
+    </Addin>
+    <Addin Name="Ansys.Rep.RepAddin" Version="23.2.1.1">
+      <is-optional-on-resume valType="Boolean">true</is-optional-on-resume>
+    </Addin>
+  </Addins>
+  <Containers>
+    <container-map valType="String">{"FileContainer": Project:FileContainer, "Messages": Project:Messages, "Parameters": Ansys.ParameterManager.ParameterManagerAddin:parameters, "Schematic": Ansys.ProjectSchematic.ProjectSchematicAddin:Default, "ReportDataContainer": Ansys.ProjectReporting.Addin:ReportDataContainer, "Graphics": Ansys.Graphics.GraphicsAddin:graphics, "Units": Ansys.Units.Commands.Addin:Units, "DpdbContainer": Ansys.Dpdb.DpdbAddin:DpdbContainer, "RepContainer": Ansys.Rep.RepAddin:RepContainer}</container-map>
+    <static-container-ids valType="String">{"FileContainer": FileManager, "Parameters": Parameters, "Schematic": Schematic, "ReportDataContainer": ReportDataContainer, "Graphics": Graphics, "Units": Units, "DpdbContainer": DpdbContainer, "RepContainer": RepContainer}</static-container-ids>
+    <Container Name="FileContainer" Version="1.0">
+      <container-type valType="String">Project:FileContainer</container-type>
+      <static-id valType="String">FileManager</static-id>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">0</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 9137, "Input": 1513, "Output": 1513}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <contains-significant-data valType="Boolean">false</contains-significant-data>
+      <Object Name="/FileContainer/FileReference:F1" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F1</object-name>
+        <member-data valType="String">{"DisplayText": "proba3_kicsi.wbpj", "FileType": $$97bb9ed4-0eca-4bc2-86d4-580693e74f49, "DependentFiles": [], "ContainerAssociations": [], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": "$(ProjectName).wbpj", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F2" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F2</object-name>
+        <member-data valType="String">{"DisplayText": "act.dat", "FileType": $$70826d3e-c5eb-43e3-8639-b4b46f6c8d49, "DependentFiles": [], "ContainerAssociations": [], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\act.dat", "ReferenceCount": 85}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F3" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F3</object-name>
+        <member-data valType="String">{"DisplayText": "BG.bgd", "FileType": $$ec213599-c6dd-4de5-8359-ac0b573b2abe, "DependentFiles": [], "ContainerAssociations": ["Blade Design"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\BG\TS\BG.bgd", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F4" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F4</object-name>
+        <member-data valType="String">{"DisplayText": "BG.inf", "FileType": $$e6c9f7d7-2113-41df-b6e9-61eab8567988, "DependentFiles": [], "ContainerAssociations": ["Blade Design"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\BG\TS\BG.inf", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F5" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F5</object-name>
+        <member-data valType="String">{"DisplayText": "BG-1.bgd", "FileType": $$ec213599-c6dd-4de5-8359-ac0b573b2abe, "DependentFiles": [], "ContainerAssociations": ["Blade Design 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\BG-1\TS\BG-1.bgd", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F6" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F6</object-name>
+        <member-data valType="String">{"DisplayText": "BG-1.inf", "FileType": $$e6c9f7d7-2113-41df-b6e9-61eab8567988, "DependentFiles": [], "ContainerAssociations": ["Blade Design 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\BG-1\TS\BG-1.inf", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F9" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F9</object-name>
+        <member-data valType="String">{"DisplayText": "CFX.cfx", "FileType": $$4e3943e7-1b40-4ec9-871d-21ff1ee63c91, "DependentFiles": [], "ContainerAssociations": ["Setup"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\CFX\CFX\CFX.cfx", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F76" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F76</object-name>
+        <member-data valType="String">{"DisplayText": "CFX.cfx", "FileType": $$4e3943e7-1b40-4ec9-871d-21ff1ee63c91, "DependentFiles": [], "ContainerAssociations": ["Setup 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\CFX-1\CFX\CFX.cfx", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F69" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F69</object-name>
+        <member-data valType="String">{"DisplayText": "BG-2.bgd", "FileType": $$ec213599-c6dd-4de5-8359-ac0b573b2abe, "DependentFiles": [], "ContainerAssociations": ["Blade Design 2"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\BG-2\TS\BG-2.bgd", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F73" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F73</object-name>
+        <member-data valType="String">{"DisplayText": "BG-3.inf", "FileType": $$e6c9f7d7-2113-41df-b6e9-61eab8567988, "DependentFiles": [], "ContainerAssociations": ["Blade Design 3"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\BG-3\TS\BG-3.inf", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F72" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F72</object-name>
+        <member-data valType="String">{"DisplayText": "BG-3.bgd", "FileType": $$ec213599-c6dd-4de5-8359-ac0b573b2abe, "DependentFiles": [], "ContainerAssociations": ["Blade Design 3"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\BG-3\TS\BG-3.bgd", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F70" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F70</object-name>
+        <member-data valType="String">{"DisplayText": "BG-2.inf", "FileType": $$e6c9f7d7-2113-41df-b6e9-61eab8567988, "DependentFiles": [], "ContainerAssociations": ["Blade Design 2"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\BG-2\TS\BG-2.inf", "ReferenceCount": 1}</member-data>
+      </Object>
+      <Object Name="/FileContainer/FileReference:F97" Version="1.0">
+        <class-type valType="String">FileReference</class-type>
+        <object-name valType="String">F97</object-name>
+        <member-data valType="String">{"DisplayText": "CFX.cst", "FileType": $$af67be92-c5cf-4cc4-bb9e-bdcf922cb915, "DependentFiles": [], "ContainerAssociations": ["Results 1"], "SkipForDesignPointDuplication": False, "IsDeletable": True, "ExternalSource": None, "LastDownloadFromRepository": -1, "Location": r"$(ProjectName)_files\dp0\CFX-1\Post\CFX.cst", "ReferenceCount": 1}</member-data>
+      </Object>
+    </Container>
+    <Container Name="Messages" Version="1.0">
+      <container-type valType="String">Project:Messages</container-type>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">0</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 7967, "Input": 1514, "Output": 1514}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <contains-significant-data valType="Boolean">false</contains-significant-data>
+      <Object Name="/Messages/StoredMessage:Message" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/07/2024 13:34:08, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 1" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 1</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 13:34:09, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 2" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 2</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 13:34:09, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 3" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 3</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/07/2024 13:34:09, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 4" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 4</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/07/2024 15:01:38, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 5" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 5</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 15:01:38, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 6" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 6</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 15:01:38, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 7" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 7</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/07/2024 15:01:38, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 8" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 8</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/07/2024 15:03:09, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 9" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 9</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 15:03:09, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 10" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 10</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 15:03:09, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 11" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 11</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/07/2024 15:03:09, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 12" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 12</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/07/2024 15:05:35, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 13" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 13</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 15:05:35, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 14" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 14</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 15:05:35, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 15" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 15</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/07/2024 15:05:35, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 16" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 16</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": "The Turbo Mesh component in TurboGrid requires user input before it can be updated. For instructions on how to address the cell in its current state, click the blue triangle in the lower right corner of the cell in the Project Schematic.", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 15:05:44, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": "0"}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 17" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 17</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/07/2024 15:08:03, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 18" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 18</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 15:08:03, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 19" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 19</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 15:08:03, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 20" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 20</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/07/2024 15:08:03, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 21" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 21</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": "The Turbo Mesh component in TurboGrid requires user input before it can be updated. For instructions on how to address the cell in its current state, click the blue triangle in the lower right corner of the cell in the Project Schematic.", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 15:08:26, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": "0"}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 22" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 22</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/07/2024 15:12:16, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 23" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 23</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 15:12:16, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 24" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 24</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 15:12:16, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 25" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 25</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/07/2024 15:12:16, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 26" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 26</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/07/2024 17:36:59, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 27" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 27</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 17:36:59, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 28" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 28</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 17:36:59, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 29" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 29</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/07/2024 17:36:59, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 30" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 30</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/07/2024 17:41:17, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 31" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 31</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 17:41:18, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 32" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 32</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 17:41:18, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 33" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 33</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/07/2024 17:41:18, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 34" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 34</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/07/2024 17:51:44, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 35" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 35</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 17:51:44, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 36" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 36</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 17:51:44, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 37" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 37</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/07/2024 17:51:44, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 38" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 38</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/07/2024 17:53:25, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 39" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 39</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 17:53:25, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 40" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 40</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 17:53:25, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 41" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 41</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/07/2024 17:53:25, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 42" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 42</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 18:29:15, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 43" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 43</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 18:31:07, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 44" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 44</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/07/2024 18:35:40, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 45" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 45</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 18:42:30, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 46" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 46</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 18:52:47, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 47" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 47</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 18:55:58, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 48" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 48</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/07/2024 18:58:42, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 49" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 49</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 19:05:12, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 50" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 50</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Exception of type 'Ansys.Fluent.Cortex.CortexNotAvailableException' was thrown.", "Details": """Ansys.Fluent.Cortex.CortexNotAvailableException: Exception of type 'Ansys.Fluent.Cortex.CortexNotAvailableException' was thrown.
+   at Ansys.Fluent.Data.SetupData.GetCommunicator(IReadLockContainer context)
+   at Ansys.Fluent.Data.SetupData.ReadCaseModelInfo(IFullContext context)
+   at Ansys.Fluent.Data.SetupData.ReadMeshAndModelInfo(IFullContext context)
+   at Ansys.Fluent.Data.SetupData.LoadFiles(IFullContext context)
+   at Ansys.Fluent.Commands.EditCommand.Execute(IFullContext context)
+   at Ansys.Core.Commands.Concurrency.CommandWorkUnit.executeInContext(CommandContext subContext, IExecutionEngineCallback tracer)
+   at Ansys.Core.Commands.Concurrency.BaseWorkUnit.doExecute(IExecutionEngineCallback executionEngine, CommandContext subContext)
+   at Ansys.Core.Commands.Concurrency.BaseWorkUnit.Execute(IExecutionEngineCallback executionEngine, Boolean dontCatchExceptions)
+--- Ansys.Core.Commands.CommandFailedException: Exception of type 'Ansys.Fluent.Cortex.CortexNotAvailableException' was thrown.
+CommandName: Fluent.Edit(Container=\"Setup 1\")
+   at Ansys.Core.Commands.CommandAsyncResult.RethrowFailureException(Exception e)
+   at Ansys.Core.Commands.CommandAsyncResult.Wait(Int32 milliSecondsTimeout, Boolean exitContext)
+   at Ansys.Fluent.Commands.EditCommand.InvokeAndWait(IProtectedContext context, DataContainerReference Container, Boolean Interactive)
+   at Ansys.Fluent.Gui.OpenInFluentGui.Invoke(GuiOperationContext context)
+   at Ansys.UI.GuiOperationContext.Invoke(GuiOperationMetaData operationData)
+   at Ansys.UI.UIManager.InvokeOperationCore(String pseudoname, OperationDelegate callback, Boolean allowOSMessages, Boolean coreTransaction, Boolean deferredRefreshOnly)
+""", "Association": "", "DateTimeStamp": 03/07/2024 19:11:40, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 51" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 51</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 19:24:04, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 52" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 52</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/07/2024 20:01:58, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 53" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 53</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/08/2024 23:08:56, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 54" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 54</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/08/2024 23:09:51, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 55" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 55</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": "Update interrupted", "Details": None, "Association": "", "DateTimeStamp": 03/08/2024 23:17:54, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": "0"}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 56" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 56</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/08/2024 23:20:35, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 57" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 57</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/09/2024 00:11:25, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 58" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 58</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/12/2024 22:57:40, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 59" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 59</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": "Update interrupted", "Details": None, "Association": "", "DateTimeStamp": 03/12/2024 23:13:21, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": "0"}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 60" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 60</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/12/2024 23:23:35, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 61" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 61</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/13/2024 12:55:31, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 62" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 62</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/13/2024 16:40:05, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 63" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 63</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 16:40:05, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 64" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 64</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 16:40:05, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 65" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 65</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/13/2024 16:40:05, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 66" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 66</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/13/2024 16:50:01, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 67" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 67</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 16:50:01, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 68" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 68</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 16:50:01, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 69" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 69</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/13/2024 16:50:01, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 70" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 70</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 57440.8, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 18:50:43, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 71" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 71</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 57440.8, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 18:50:43, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 72" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 72</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+HUB dimensions, 57440.8, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+SHROUD dimensions, 57440.8, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/13/2024 18:50:43, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 73" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 73</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/13/2024 19:21:32, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 74" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 74</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 57440.8, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 19:21:32, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 75" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 75</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 57440.8, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 19:21:32, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 76" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 76</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+SHROUD dimensions, 57440.8, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+HUB dimensions, 57440.8, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/13/2024 19:21:32, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 77" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 77</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "ICEM error:Error creating curve:", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 19:31:33, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 78" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 78</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+ICEM error:Error creating curve:""", "Association": "", "DateTimeStamp": 03/13/2024 19:31:33, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 79" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 79</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/13/2024 20:07:32, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 80" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 80</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 20:07:32, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 81" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 81</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": """HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 20:07:32, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 82" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 82</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Application error(s) occurred in TurboGrid.  To view the full message please click 'Show Details' or review in the Messages window.", "Details": """TurboGrid Application Error
+
+ERROR
+SHROUD dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.
+
+
+ERROR
+HUB dimensions, 18845.4, are outside of the ideal range (0.2-200).
+Without corrective action, serious geometry and mesh generation problems may result. 
+Try using different Base Units for Machine Data.""", "Association": "", "DateTimeStamp": 03/13/2024 20:07:32, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 83" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 83</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 21:25:22, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 84" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 84</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 21:29:00, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 85" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 85</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 21:33:04, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 86" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 86</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/13/2024 22:29:49, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 87" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 87</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/13/2024 22:40:22, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 88" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 88</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/14/2024 09:20:34, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 89" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 89</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/14/2024 09:28:11, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 90" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 90</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/14/2024 09:28:20, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 91" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 91</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/14/2024 09:40:51, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 92" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 92</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/14/2024 09:41:17, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 93" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 93</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/14/2024 10:05:54, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 94" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 94</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/15/2024 17:54:57, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 95" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 95</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/15/2024 18:01:38, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 96" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 96</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/15/2024 18:01:51, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 97" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 97</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/15/2024 18:21:14, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 98" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 98</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/15/2024 18:24:04, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 99" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 99</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/15/2024 18:25:04, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 100" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 100</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/15/2024 18:38:17, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 101" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 101</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/15/2024 18:50:01, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 102" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 102</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/15/2024 19:22:21, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 103" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 103</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/15/2024 20:06:25, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 104" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 104</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/19/2024 22:21:31, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 105" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 105</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/19/2024 22:43:36, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 106" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 106</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/25/2024 15:45:06, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 107" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 107</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": "Update interrupted", "Details": None, "Association": "", "DateTimeStamp": 03/25/2024 15:50:44, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": "0"}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 108" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 108</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/25/2024 16:09:30, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 109" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 109</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/25/2024 16:47:27, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 110" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 110</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/25/2024 16:48:36, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 111" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 111</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/25/2024 16:50:04, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 112" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 112</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Error", "MessageCategory": "None", "Summary": "Update failed for the Solution component in CFX.  The solver failed with a non-zero exit code of : 2", "Details": None, "Association": "", "DateTimeStamp": 03/25/2024 17:22:48, "Visibility": "Error", "MessageSourceContainer": None, "MessageSourceEntity": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+      <Object Name="/Messages/StoredMessage:Message 113" Version="1.0">
+        <class-type valType="String">StoredMessage</class-type>
+        <object-name valType="String">Message 113</object-name>
+        <member-data valType="String">{"DisplayText": "Message", "MessageType": "Information", "MessageCategory": "None", "Summary": """Application Error in TurboGrid: WARNING
+Length units were not specified in the INF file.
+Units will default to m.""", "Details": """TurboGrid Application Error
+
+WARNING
+Length units were not specified in the INF file.
+Units will default to m.
+
+""", "Association": "", "DateTimeStamp": 03/25/2024 18:06:17, "Visibility": "Information", "MessageSourceContainer": None, "MessageSourceEntity": None, "AdditionalMessageData": None, "DesignPoint": None}</member-data>
+      </Object>
+    </Container>
+    <Container Name="Parameters" Version="1.0">
+      <container-type valType="String">Ansys.ParameterManager.ParameterManagerAddin:parameters</container-type>
+      <static-id valType="String">Parameters</static-id>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <maxUpdateOrder valType="Double">1</maxUpdateOrder>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">0</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 8755, "Input": 2012, "Output": 1517}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <contains-significant-data valType="Boolean">false</contains-significant-data>
+      <Object Name="/Parameters/DesignPoint:0" Version="1.0">
+        <class-type valType="String">DesignPoint</class-type>
+        <object-name valType="String">0</object-name>
+        <member-data valType="String">{"DisplayText": "DP 0", "JustDuplicated": False, "PartiallyRetainedData": [], "ValidRetainedData": [], "ErrorsOnLastUpdate": {}, "LastUpdateInformation": {"DidUpdate": "True", "DidPreRsmUpdate": "False", "UpdatedComponents": "Solution 1 in CFX 1"}, "Parameters": {}, "ParameterErrors": {}, "CurrentValues": {}, "ParameterStatus": {}, "Note": None, "IsUpToDate": False, "Exported": True, "Retained": True, "CurrentStateExported": False, "IsDataModelValid": True, "HasRetainedData": True, "HasBeenSolved": True, "UpdateOrder": 1}</member-data>
+        <properties-setByUserFlag-data valType="String">["IsDataModelValid"]</properties-setByUserFlag-data>
+      </Object>
+      <Object Name="/Parameters/DesignPointReportSetting:Design Points Report Setting" Version="1.0">
+        <class-type valType="String">DesignPointReportSetting</class-type>
+        <object-name valType="String">Design Points Report Setting</object-name>
+        <member-data valType="String">{"DisplayText": "Design Points Report Setting", "DesignPointReportImage": "None"}</member-data>
+      </Object>
+      <ParameterToPropertyMap />
+    </Container>
+    <Container Name="Schematic" Version="1.0">
+      <container-type valType="String">Ansys.ProjectSchematic.ProjectSchematicAddin:Default</container-type>
+      <static-id valType="String">Schematic</static-id>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">0</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 9026, "Input": 9123, "Output": 1520}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <contains-significant-data valType="Boolean">true</contains-significant-data>
+      <Object Name="/Schematic/System:BG" Version="1.0">
+        <class-type valType="String">System</class-type>
+        <object-name valType="String">BG</object-name>
+        <member-data valType="String">{"DisplayText": "v1", "Components": [$$32d38b0f-d9cb-4ed0-9aac-e37d493713ae], "ComponentGroups": [], "SystemVisible": True, "RequiredComponents": [$$32d38b0f-d9cb-4ed0-9aac-e37d493713ae], "ExcludedComponentTemplates": [], "Attributes": {"PhysicsType": None, "AnalysisType": None, "SolverType": None, "SystemName": "BladeGen", "VOLATILE:SystemName": "BG"}, "SystemType": "BladeGen", "HeaderText": "BladeGen", "SystemTypeAbbreviation": "BG", "UniqueSystemDirectoryName": "BG", "Physics": [], "AnalysisType": None, "SystemHelpId": "wb2sb_bladegenapp", "AdditionalSystemHelpId": None, "IsParametric": False, "CreatedFromTemplate": $$9c751144-eaed-46f0-8f36-cdfd956801b6, "Notes": None, "LayoutChildren": [$$1f55ea7c-0fe7-4d97-91c4-1bc072a0f148], "LayoutIndex": 1}</member-data>
+        <properties-setByUserFlag-data valType="String">["DisplayText"]</properties-setByUserFlag-data>
+      </Object>
+      <Object Name="/Schematic/System:TS" Version="1.0">
+        <class-type valType="String">System</class-type>
+        <object-name valType="String">TS</object-name>
+        <member-data valType="String">{"DisplayText": "TurboGrid", "Components": [$$69f3d7c3-2e6a-4eaf-8bde-398cf03de758], "ComponentGroups": [], "SystemVisible": True, "RequiredComponents": [$$69f3d7c3-2e6a-4eaf-8bde-398cf03de758], "ExcludedComponentTemplates": [], "Attributes": {"PhysicsType": "Fluids", "AnalysisType": None, "SolverType": None, "PhysicsTypeDisplayString": "Fluids", "SystemName": "TurboGrid", "VOLATILE:SystemName": "TS"}, "SystemType": "TurboGrid", "HeaderText": "TurboGrid", "SystemTypeAbbreviation": "TS", "UniqueSystemDirectoryName": "TS", "Physics": [], "AnalysisType": None, "SystemHelpId": "wb2sb_turbogridapp", "AdditionalSystemHelpId": None, "IsParametric": False, "CreatedFromTemplate": $$7c81e9af-5c06-4405-9ac8-9be8b69ac262, "Notes": None, "LayoutChildren": [], "LayoutIndex": 0}</member-data>
+      </Object>
+      <Object Name="/Schematic/System:BG 1" Version="1.0">
+        <class-type valType="String">System</class-type>
+        <object-name valType="String">BG 1</object-name>
+        <member-data valType="String">{"DisplayText": "v2", "Components": [$$e1a1d3dd-4a86-434f-9def-61e70f8597c7], "ComponentGroups": [], "SystemVisible": True, "RequiredComponents": [$$e1a1d3dd-4a86-434f-9def-61e70f8597c7], "ExcludedComponentTemplates": [], "Attributes": {"PhysicsType": None, "AnalysisType": None, "SolverType": None, "SystemName": "BladeGen", "VOLATILE:SystemName": "BG 1"}, "SystemType": "BladeGen", "HeaderText": "BladeGen", "SystemTypeAbbreviation": "BG", "UniqueSystemDirectoryName": "BG-1", "Physics": [], "AnalysisType": None, "SystemHelpId": "wb2sb_bladegenapp", "AdditionalSystemHelpId": None, "IsParametric": False, "CreatedFromTemplate": $$9c751144-eaed-46f0-8f36-cdfd956801b6, "Notes": None, "LayoutChildren": [$$3e071240-8129-4dde-af61-0fe3ccfd62ed], "LayoutIndex": 2}</member-data>
+        <properties-setByUserFlag-data valType="String">["DisplayText"]</properties-setByUserFlag-data>
+      </Object>
+      <Object Name="/Schematic/System:TS 1" Version="1.0">
+        <class-type valType="String">System</class-type>
+        <object-name valType="String">TS 1</object-name>
+        <member-data valType="String">{"DisplayText": "TurboGrid", "Components": [$$f78e1ef5-aa73-436a-9d33-824b86229186], "ComponentGroups": [], "SystemVisible": True, "RequiredComponents": [$$f78e1ef5-aa73-436a-9d33-824b86229186], "ExcludedComponentTemplates": [], "Attributes": {"PhysicsType": "Fluids", "AnalysisType": None, "SolverType": None, "PhysicsTypeDisplayString": "Fluids", "SystemName": "TurboGrid", "VOLATILE:SystemName": "TS 1"}, "SystemType": "TurboGrid", "HeaderText": "TurboGrid", "SystemTypeAbbreviation": "TS", "UniqueSystemDirectoryName": "TS-1", "Physics": [], "AnalysisType": None, "SystemHelpId": "wb2sb_turbogridapp", "AdditionalSystemHelpId": None, "IsParametric": False, "CreatedFromTemplate": $$7c81e9af-5c06-4405-9ac8-9be8b69ac262, "Notes": None, "LayoutChildren": [$$39781895-1834-458b-a376-e76bbd53435e], "LayoutIndex": 0}</member-data>
+      </Object>
+      <Object Name="/Schematic/System:CFX" Version="1.0">
+        <class-type valType="String">System</class-type>
+        <object-name valType="String">CFX</object-name>
+        <member-data valType="String">{"DisplayText": "CFX", "Components": [$$48685d33-da77-4195-9aca-6d06a00f996a, $$618275f3-26d8-4c0d-9476-95399bb7b7ed, $$8127be44-096d-4e9f-8705-df887a191402], "ComponentGroups": [], "SystemVisible": True, "RequiredComponents": [], "ExcludedComponentTemplates": [], "Attributes": {"PhysicsType": "Fluids", "AnalysisType": None, "SolverType": "CFX", "PhysicsTypeDisplayString": "Fluids", "SystemName": "CFX", "VOLATILE:SystemName": "CFX"}, "SystemType": "CFX", "HeaderText": "CFX", "SystemTypeAbbreviation": "CFX", "UniqueSystemDirectoryName": "CFX", "Physics": [], "AnalysisType": None, "SystemHelpId": "wb2sb_cfxapp", "AdditionalSystemHelpId": None, "IsParametric": False, "CreatedFromTemplate": $$4ae81db1-ebe3-4097-833a-1f9c9e824756, "Notes": None, "LayoutChildren": [$$866ddb74-0089-4936-b786-5dd5fe177248], "LayoutIndex": 0}</member-data>
+      </Object>
+      <Object Name="/Schematic/System:BG 2" Version="1.0">
+        <class-type valType="String">System</class-type>
+        <object-name valType="String">BG 2</object-name>
+        <member-data valType="String">{"DisplayText": "v3", "Components": [$$ac921675-5c52-49dd-aacf-11baa4e78f94], "ComponentGroups": [], "SystemVisible": True, "RequiredComponents": [$$ac921675-5c52-49dd-aacf-11baa4e78f94], "ExcludedComponentTemplates": [], "Attributes": {"PhysicsType": None, "AnalysisType": None, "SolverType": None, "SystemName": "BladeGen", "VOLATILE:SystemName": "BG 2"}, "SystemType": "BladeGen", "HeaderText": "BladeGen", "SystemTypeAbbreviation": "BG", "UniqueSystemDirectoryName": "BG-2", "Physics": [], "AnalysisType": None, "SystemHelpId": "wb2sb_bladegenapp", "AdditionalSystemHelpId": None, "IsParametric": False, "CreatedFromTemplate": $$9c751144-eaed-46f0-8f36-cdfd956801b6, "Notes": None, "LayoutChildren": [$$bfbe5a40-859d-4d21-9457-62c7867398cd], "LayoutIndex": 3}</member-data>
+        <properties-setByUserFlag-data valType="String">["DisplayText"]</properties-setByUserFlag-data>
+      </Object>
+      <Object Name="/Schematic/System:TS 2" Version="1.0">
+        <class-type valType="String">System</class-type>
+        <object-name valType="String">TS 2</object-name>
+        <member-data valType="String">{"DisplayText": "TurboGrid", "Components": [$$3a6b49b8-894f-42df-bc37-5070cfa80264], "ComponentGroups": [], "SystemVisible": True, "RequiredComponents": [$$3a6b49b8-894f-42df-bc37-5070cfa80264], "ExcludedComponentTemplates": [], "Attributes": {"PhysicsType": "Fluids", "AnalysisType": None, "SolverType": None, "PhysicsTypeDisplayString": "Fluids", "SystemName": "TurboGrid", "VOLATILE:SystemName": "TS 2"}, "SystemType": "TurboGrid", "HeaderText": "TurboGrid", "SystemTypeAbbreviation": "TS", "UniqueSystemDirectoryName": "TS-2", "Physics": [], "AnalysisType": None, "SystemHelpId": "wb2sb_turbogridapp", "AdditionalSystemHelpId": None, "IsParametric": False, "CreatedFromTemplate": $$7c81e9af-5c06-4405-9ac8-9be8b69ac262, "Notes": None, "LayoutChildren": [], "LayoutIndex": 0}</member-data>
+      </Object>
+      <Object Name="/Schematic/System:TS 3" Version="1.0">
+        <class-type valType="String">System</class-type>
+        <object-name valType="String">TS 3</object-name>
+        <member-data valType="String">{"DisplayText": "Egyszeru_nagyszeru", "Components": [$$63665863-0bf0-4507-8178-639940e73210], "ComponentGroups": [], "SystemVisible": True, "RequiredComponents": [$$63665863-0bf0-4507-8178-639940e73210], "ExcludedComponentTemplates": [], "Attributes": {"PhysicsType": "Fluids", "AnalysisType": None, "SolverType": None, "PhysicsTypeDisplayString": "Fluids", "SystemName": "TurboGrid", "VOLATILE:SystemName": "TS 3"}, "SystemType": "TurboGrid", "HeaderText": "TurboGrid", "SystemTypeAbbreviation": "TS", "UniqueSystemDirectoryName": "TS-3", "Physics": [], "AnalysisType": None, "SystemHelpId": "wb2sb_turbogridapp", "AdditionalSystemHelpId": None, "IsParametric": False, "CreatedFromTemplate": $$7c81e9af-5c06-4405-9ac8-9be8b69ac262, "Notes": None, "LayoutChildren": [$$4b659fde-40da-4c80-aebf-6ca79730d5e0], "LayoutIndex": 0}</member-data>
+        <properties-setByUserFlag-data valType="String">["DisplayText"]</properties-setByUserFlag-data>
+      </Object>
+      <Object Name="/Schematic/System:BG 3" Version="1.0">
+        <class-type valType="String">System</class-type>
+        <object-name valType="String">BG 3</object-name>
+        <member-data valType="String">{"DisplayText": "Csongor_elolrol", "Components": [$$dc9b73ab-51cb-4e09-a5ab-10af176094dd], "ComponentGroups": [], "SystemVisible": True, "RequiredComponents": [$$dc9b73ab-51cb-4e09-a5ab-10af176094dd], "ExcludedComponentTemplates": [], "Attributes": {"PhysicsType": None, "AnalysisType": None, "SolverType": None, "SystemName": "BladeGen", "VOLATILE:SystemName": "BG 3"}, "SystemType": "BladeGen", "HeaderText": "BladeGen", "SystemTypeAbbreviation": "BG", "UniqueSystemDirectoryName": "BG-3", "Physics": [], "AnalysisType": None, "SystemHelpId": "wb2sb_bladegenapp", "AdditionalSystemHelpId": None, "IsParametric": False, "CreatedFromTemplate": $$9c751144-eaed-46f0-8f36-cdfd956801b6, "Notes": None, "LayoutChildren": [$$539ef6c0-d4ac-43b9-aa95-dfbddfb9d02f], "LayoutIndex": 0}</member-data>
+        <properties-setByUserFlag-data valType="String">["DisplayText"]</properties-setByUserFlag-data>
+      </Object>
+      <Object Name="/Schematic/System:CFX 1" Version="1.0">
+        <class-type valType="String">System</class-type>
+        <object-name valType="String">CFX 1</object-name>
+        <member-data valType="String">{"DisplayText": "CFX", "Components": [$$0437e16e-7e87-46fa-a877-abfed2f7a277, $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, $$6317cbec-2f3d-4cba-b024-77edf95799f3], "ComponentGroups": [], "SystemVisible": True, "RequiredComponents": [], "ExcludedComponentTemplates": [], "Attributes": {"PhysicsType": "Fluids", "AnalysisType": None, "SolverType": "CFX", "PhysicsTypeDisplayString": "Fluids", "SystemName": "CFX", "VOLATILE:SystemName": "CFX 1"}, "SystemType": "CFX", "HeaderText": "CFX", "SystemTypeAbbreviation": "CFX", "UniqueSystemDirectoryName": "CFX-1", "Physics": [], "AnalysisType": None, "SystemHelpId": "wb2sb_cfxapp", "AdditionalSystemHelpId": None, "IsParametric": False, "CreatedFromTemplate": $$4ae81db1-ebe3-4097-833a-1f9c9e824756, "Notes": None, "LayoutChildren": [], "LayoutIndex": 0}</member-data>
+      </Object>
+      <Object Name="/Schematic/SchematicSettings:Schematic Settings" Version="1.0">
+        <class-type valType="String">SchematicSettings</class-type>
+        <object-name valType="String">Schematic Settings</object-name>
+        <member-data valType="String">{"DisplayText": "Schematic Settings", "WireBundling": False, "ShowSystemCoordinates": True, "Notes": None, "SuspendCollectingRSMResult": False}</member-data>
+      </Object>
+      <Object Name="/Schematic/DesignPointSolveSettings:Design Points Update Settings" Version="1.0">
+        <class-type valType="String">DesignPointSolveSettings</class-type>
+        <object-name valType="String">Design Points Update Settings</object-name>
+        <member-data valType="String">{"DisplayText": "Design Points Update Settings", "UpdateOption": "Foreground", "RsmUserString": None, "ConfiguredQueue": {"OptionIcons": None, "OptionLabels": "Local", "Options": "Local", "ReadOnlyOptions": None, "OptionFeatureFlags": None, "OptionFilterFlags": None, "OptionLicenseFlags": None, "Value": "Local"}, "RsmJobName": "Workbench", "UpdateMethod": "Foreground", "UpdateOrder": "UpdateFromCurrentDesignPoint", "PreRSMUpdate": "Geometry", "PartialUpdate": "None", "RetainPartialUpdate": "None", "ComponentExecutionMode": "Serial", "NumberOfCoresPerJob": 2, "RetainFailedDesignPoints": False, "DesignPointRetainedOrExportedUpdate": "Parameters", "DesignPointUpdateTimeout": 0, "JobStatusCheckIntervalInSeconds": 20, "NumberOfJobsToBeCreated": 1, "NumberOfTasksToBeCreated": 1}</member-data>
+      </Object>
+      <Object Name="/Schematic/Bookkeeper:Schematic bookkeeper" Version="1.0">
+        <class-type valType="String">Bookkeeper</class-type>
+        <object-name valType="String">Schematic bookkeeper</object-name>
+        <member-data valType="String">{"DisplayText": "Schematic bookkeeper", "UpfrontLicenseCheckoutSelection": []}</member-data>
+      </Object>
+      <Object Name="/Schematic/CustomProjectTemplate:FSI: Fluid Flow (CFX) -&gt; Static Structural" Version="1.0">
+        <class-type valType="String">CustomProjectTemplate</class-type>
+        <object-name valType="String">FSI: Fluid Flow (CFX) -&gt; Static Structural</object-name>
+        <member-data valType="String">{"DisplayText": "FSI: Fluid Flow (CFX) -&gt; Static Structural", "SystemTemplates": [$$89dafc07-e122-4dff-9fb2-5ea0d595ab9a, $$be12b1e5-925b-4188-800e-fe4a02d8711e], "SystemNames": ["Fluid Flow (CFX)", "Static Structural (ANSYS)"], "ToolboxGroup": "Custom Systems", "AdditionalSystemHelpId": None, "PostCreationSteps": [["Share", "Fluid Flow (CFX):Geometry", "Static Structural (ANSYS):Geometry"], ["Connect", "Fluid Flow (CFX):Solution:CFXTransferResultsTemplate", "Static Structural (ANSYS):Setup"]], "LayoutIndices": {"Fluid Flow (CFX)": 1, "Static Structural (ANSYS)": 0}, "LayoutChildren": {"Fluid Flow (CFX)": ["Static Structural (ANSYS)"]}, "Attributes": {}, "SystemDisplayTexts": {}, "DisabledOnPlatform": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/CustomProjectTemplate:FSI: Fluid Flow (FLUENT) -&gt; Static Structural" Version="1.0">
+        <class-type valType="String">CustomProjectTemplate</class-type>
+        <object-name valType="String">FSI: Fluid Flow (FLUENT) -&gt; Static Structural</object-name>
+        <member-data valType="String">{"DisplayText": "FSI: Fluid Flow (FLUENT) -&gt; Static Structural", "SystemTemplates": [$$e3554d08-6b6b-4439-874c-5531875ec659, $$be12b1e5-925b-4188-800e-fe4a02d8711e], "SystemNames": ["Fluid Flow (FLUENT)", "Static Structural (ANSYS)"], "ToolboxGroup": "Custom Systems", "AdditionalSystemHelpId": None, "PostCreationSteps": [["Share", "Fluid Flow (FLUENT):Geometry", "Static Structural (ANSYS):Geometry"], ["Connect", "Fluid Flow (FLUENT):Solution", "Static Structural (ANSYS):Setup"]], "LayoutIndices": {"Fluid Flow (FLUENT)": 1, "Static Structural (ANSYS)": 0}, "LayoutChildren": {"Fluid Flow (FLUENT)": ["Static Structural (ANSYS)"]}, "Attributes": {}, "SystemDisplayTexts": {}, "DisabledOnPlatform": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/CustomProjectTemplate:Thermal-Stress" Version="1.0">
+        <class-type valType="String">CustomProjectTemplate</class-type>
+        <object-name valType="String">Thermal-Stress</object-name>
+        <member-data valType="String">{"DisplayText": "Thermal-Stress", "SystemTemplates": [$$ac1c47ad-5eb1-4b7a-8c3e-1e344c13099a, $$be12b1e5-925b-4188-800e-fe4a02d8711e], "SystemNames": ["Steady-State Thermal (ANSYS)", "Static Structural (ANSYS)"], "ToolboxGroup": "Custom Systems", "AdditionalSystemHelpId": None, "PostCreationSteps": [["Share", "Steady-State Thermal (ANSYS):Engineering Data", "Static Structural (ANSYS):Engineering Data"], ["Share", "Steady-State Thermal (ANSYS):Geometry", "Static Structural (ANSYS):Geometry"], ["Share", "Steady-State Thermal (ANSYS):Model", "Static Structural (ANSYS):Model"], ["Connect", "Steady-State Thermal (ANSYS):Solution", "Static Structural (ANSYS):Setup"]], "LayoutIndices": {"Steady-State Thermal (ANSYS)": 1, "Static Structural (ANSYS)": 0}, "LayoutChildren": {"Steady-State Thermal (ANSYS)": ["Static Structural (ANSYS)"]}, "Attributes": {}, "SystemDisplayTexts": {}, "DisabledOnPlatform": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/CustomProjectTemplate:Pre-Stress Modal" Version="1.0">
+        <class-type valType="String">CustomProjectTemplate</class-type>
+        <object-name valType="String">Pre-Stress Modal</object-name>
+        <member-data valType="String">{"DisplayText": "Pre-Stress Modal", "SystemTemplates": [$$be12b1e5-925b-4188-800e-fe4a02d8711e, $$547bfb0e-818b-4855-9986-cfcb3694484b], "SystemNames": ["Static Structural (ANSYS)", "Modal (ANSYS)"], "ToolboxGroup": "Custom Systems", "AdditionalSystemHelpId": None, "PostCreationSteps": [["Share", "Static Structural (ANSYS):Engineering Data", "Modal (ANSYS):Engineering Data"], ["Share", "Static Structural (ANSYS):Geometry", "Modal (ANSYS):Geometry"], ["Share", "Static Structural (ANSYS):Model", "Modal (ANSYS):Model"], ["Connect", "Static Structural (ANSYS):Solution", "Modal (ANSYS):Setup"]], "LayoutIndices": {"Static Structural (ANSYS)": 1, "Modal (ANSYS)": 0}, "LayoutChildren": {"Static Structural (ANSYS)": ["Modal (ANSYS)"]}, "Attributes": {}, "SystemDisplayTexts": {}, "DisabledOnPlatform": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/CustomProjectTemplate:Random Vibration" Version="1.0">
+        <class-type valType="String">CustomProjectTemplate</class-type>
+        <object-name valType="String">Random Vibration</object-name>
+        <member-data valType="String">{"DisplayText": "Random Vibration", "SystemTemplates": [$$547bfb0e-818b-4855-9986-cfcb3694484b, $$41049bf3-aecc-4bf4-accc-5fd762b4146e], "SystemNames": ["Modal (ANSYS)", "Random Vibration (ANSYS)"], "ToolboxGroup": "Custom Systems", "AdditionalSystemHelpId": None, "PostCreationSteps": [["Share", "Modal (ANSYS):Engineering Data", "Random Vibration (ANSYS):Engineering Data"], ["Share", "Modal (ANSYS):Geometry", "Random Vibration (ANSYS):Geometry"], ["Share", "Modal (ANSYS):Model", "Random Vibration (ANSYS):Model"], ["Connect", "Modal (ANSYS):Solution", "Random Vibration (ANSYS):Setup"]], "LayoutIndices": {"Modal (ANSYS)": 1, "Random Vibration (ANSYS)": 0}, "LayoutChildren": {"Modal (ANSYS)": ["Random Vibration (ANSYS)"]}, "Attributes": {}, "SystemDisplayTexts": {}, "DisabledOnPlatform": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/CustomProjectTemplate:Response Spectrum" Version="1.0">
+        <class-type valType="String">CustomProjectTemplate</class-type>
+        <object-name valType="String">Response Spectrum</object-name>
+        <member-data valType="String">{"DisplayText": "Response Spectrum", "SystemTemplates": [$$547bfb0e-818b-4855-9986-cfcb3694484b, $$1660f959-b134-4b2b-90f9-0ffa63ff2bc3], "SystemNames": ["Modal (ANSYS)", "Response Spectrum (ANSYS)"], "ToolboxGroup": "Custom Systems", "AdditionalSystemHelpId": None, "PostCreationSteps": [["Share", "Modal (ANSYS):Engineering Data", "Response Spectrum (ANSYS):Engineering Data"], ["Share", "Modal (ANSYS):Geometry", "Response Spectrum (ANSYS):Geometry"], ["Share", "Modal (ANSYS):Model", "Response Spectrum (ANSYS):Model"], ["Connect", "Modal (ANSYS):Solution", "Response Spectrum (ANSYS):Setup"]], "LayoutIndices": {"Modal (ANSYS)": 1, "Response Spectrum (ANSYS)": 0}, "LayoutChildren": {"Modal (ANSYS)": ["Response Spectrum (ANSYS)"]}, "Attributes": {}, "SystemDisplayTexts": {}, "DisabledOnPlatform": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/CustomProjectTemplate:AM DED Process" Version="1.0">
+        <class-type valType="String">CustomProjectTemplate</class-type>
+        <object-name valType="String">AM DED Process</object-name>
+        <member-data valType="String">{"DisplayText": "AM DED Process", "SystemTemplates": [$$df0bb257-1a31-4bf3-a4ff-2c4aabbdecae, $$be12b1e5-925b-4188-800e-fe4a02d8711e], "SystemNames": ["Transient Thermal (ANSYS)", "Static Structural (ANSYS)"], "ToolboxGroup": "Custom Systems", "AdditionalSystemHelpId": None, "PostCreationSteps": [["Share", "Transient Thermal (ANSYS):Engineering Data", "Static Structural (ANSYS):Engineering Data"], ["Share", "Transient Thermal (ANSYS):Geometry", "Static Structural (ANSYS):Geometry"], ["Share", "Transient Thermal (ANSYS):Model", "Static Structural (ANSYS):Model"]], "LayoutIndices": {"Transient Thermal (ANSYS)": 1, "Static Structural (ANSYS)": 0}, "LayoutChildren": {"Transient Thermal (ANSYS)": ["Static Structural (ANSYS)"]}, "Attributes": {"Transient Thermal (ANSYS)": {"IsAMDEDSystem": "True"}, "Static Structural (ANSYS)": {"IsAMDEDSystem": "True"}}, "SystemDisplayTexts": {"Transient Thermal (ANSYS)": "AM DED Thermal", "Static Structural (ANSYS)": "AM DED Structural"}, "DisabledOnPlatform": "Linux"}</member-data>
+      </Object>
+      <Object Name="/Schematic/CustomProjectTemplate:AM LPBF Thermal-Structural" Version="1.0">
+        <class-type valType="String">CustomProjectTemplate</class-type>
+        <object-name valType="String">AM LPBF Thermal-Structural</object-name>
+        <member-data valType="String">{"DisplayText": "AM LPBF Thermal-Structural", "SystemTemplates": [$$df0bb257-1a31-4bf3-a4ff-2c4aabbdecae, $$be12b1e5-925b-4188-800e-fe4a02d8711e], "SystemNames": ["Transient Thermal (ANSYS)", "Static Structural (ANSYS)"], "ToolboxGroup": "Custom Systems", "AdditionalSystemHelpId": None, "PostCreationSteps": [["Share", "Transient Thermal (ANSYS):Engineering Data", "Static Structural (ANSYS):Engineering Data"], ["Share", "Transient Thermal (ANSYS):Geometry", "Static Structural (ANSYS):Geometry"], ["Share", "Transient Thermal (ANSYS):Model", "Static Structural (ANSYS):Model"], ["Connect", "Transient Thermal (ANSYS):Solution", "Static Structural (ANSYS):Setup"]], "LayoutIndices": {"Transient Thermal (ANSYS)": 1, "Static Structural (ANSYS)": 0}, "LayoutChildren": {"Transient Thermal (ANSYS)": ["Static Structural (ANSYS)"]}, "Attributes": {"Transient Thermal (ANSYS)": {"IsAMSystem": "True"}, "Static Structural (ANSYS)": {"IsAMSystem": "True"}}, "SystemDisplayTexts": {"Transient Thermal (ANSYS)": "AM LPBF Thermal", "Static Structural (ANSYS)": "AM LPBF Structural"}, "DisabledOnPlatform": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/CustomProjectTemplate:AM LPBF Inherent Strain" Version="1.0">
+        <class-type valType="String">CustomProjectTemplate</class-type>
+        <object-name valType="String">AM LPBF Inherent Strain</object-name>
+        <member-data valType="String">{"DisplayText": "AM LPBF Inherent Strain", "SystemTemplates": [$$be12b1e5-925b-4188-800e-fe4a02d8711e], "SystemNames": ["Static Structural (ANSYS)"], "ToolboxGroup": "Custom Systems", "AdditionalSystemHelpId": None, "PostCreationSteps": [], "LayoutIndices": {}, "LayoutChildren": {}, "Attributes": {"Static Structural (ANSYS)": {"IsAMSystem": "True"}}, "SystemDisplayTexts": {"Static Structural (ANSYS)": "AM LPBF Inherent Strain"}, "DisabledOnPlatform": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Blade Design" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Blade Design</object-name>
+        <member-data valType="String">{"DisplayText": "Blade Design", "ImageName": "BladeGen", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Blade Design", "_overwrittenUpdatable": None, "Template": $$2f7a0430-4c6e-47aa-b6f5-983206b969b2, "InSystem": $$b5a967a6-d358-471a-a740-e5d7070699fe, "MasterSources": {"Sources": []}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Turbo Mesh" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Turbo Mesh</object-name>
+        <member-data valType="String">{"DisplayText": "Turbo Mesh", "ImageName": "CFXTG", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Turbo Mesh", "_overwrittenUpdatable": None, "Template": $$e9aa9fa4-46ab-4ef3-aa0a-c419f74d4112, "InSystem": $$1f55ea7c-0fe7-4d97-91c4-1bc072a0f148, "MasterSources": {"Sources": [[{"DataType": "TurboGeometry", "Component": $$32d38b0f-d9cb-4ed0-9aac-e37d493713ae, "Transfer": None}]]}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Blade Design 1" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Blade Design 1</object-name>
+        <member-data valType="String">{"DisplayText": "Blade Design", "ImageName": "BladeGen", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Blade Design 1", "_overwrittenUpdatable": None, "Template": $$2f7a0430-4c6e-47aa-b6f5-983206b969b2, "InSystem": $$e528890b-e311-4fcd-afe6-2c8d56412691, "MasterSources": {"Sources": []}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Turbo Mesh 1" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Turbo Mesh 1</object-name>
+        <member-data valType="String">{"DisplayText": "Turbo Mesh", "ImageName": "CFXTG", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Turbo Mesh 1", "_overwrittenUpdatable": None, "Template": $$e9aa9fa4-46ab-4ef3-aa0a-c419f74d4112, "InSystem": $$3e071240-8129-4dde-af61-0fe3ccfd62ed, "MasterSources": {"Sources": [[{"DataType": "TurboGeometry", "Component": $$e1a1d3dd-4a86-434f-9def-61e70f8597c7, "Transfer": None}]]}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Setup" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Setup</object-name>
+        <member-data valType="String">{"DisplayText": "Setup", "ImageName": "setup", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Setup", "_overwrittenUpdatable": None, "Template": $$31457915-0021-44d2-9ecf-d357f99b1b0a, "InSystem": $$39781895-1834-458b-a376-e76bbd53435e, "MasterSources": {"Sources": [[{"DataType": "CFXMesh", "Component": $$f78e1ef5-aa73-436a-9d33-824b86229186, "Transfer": None}], [{"DataType": "SimulationGeneratedMesh", "Component": $$48685d33-da77-4195-9aca-6d06a00f996a, "Transfer": None}], [{"DataType": "CFXMesh", "Component": $$48685d33-da77-4195-9aca-6d06a00f996a, "Transfer": None}], [{"DataType": "FluentTGridMesh", "Component": $$48685d33-da77-4195-9aca-6d06a00f996a, "Transfer": None}], [{"DataType": "MechanicalSetup", "Component": $$48685d33-da77-4195-9aca-6d06a00f996a, "Transfer": None}]]}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Solution" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Solution</object-name>
+        <member-data valType="String">{"DisplayText": "Solution", "ImageName": "solution", "ComponentStateOnLastFailure": "Modified", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Solution", "_overwrittenUpdatable": None, "Template": $$19045437-41f3-4bbb-9b9c-1c01640ab970, "InSystem": $$39781895-1834-458b-a376-e76bbd53435e, "MasterSources": {"Sources": [[{"DataType": "CFXSetup", "Component": $$48685d33-da77-4195-9aca-6d06a00f996a, "Transfer": None}]]}, "Notes": None, "UsedLicenses": {"anshpc": 4, "cfd_base": 2, "cfd_solve_level1": 2, "cfd_solve_level2": 2}, "ActiveTransferComponents": [], "Solver": "CFX", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Results" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Results</object-name>
+        <member-data valType="String">{"DisplayText": "Results", "ImageName": "results", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Results", "_overwrittenUpdatable": None, "Template": $$894d6cd9-778d-456f-87ea-fd8970d12d47, "InSystem": $$39781895-1834-458b-a376-e76bbd53435e, "MasterSources": {"Sources": [[{"DataType": "CFXSolution", "Component": $$618275f3-26d8-4c0d-9476-95399bb7b7ed, "Transfer": None}]]}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Blade Design 2" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Blade Design 2</object-name>
+        <member-data valType="String">{"DisplayText": "Blade Design", "ImageName": "BladeGen", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Blade Design 2", "_overwrittenUpdatable": None, "Template": $$2f7a0430-4c6e-47aa-b6f5-983206b969b2, "InSystem": $$d19a16c8-fb9b-4975-aee0-49c3c1cea09c, "MasterSources": {"Sources": []}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Turbo Mesh 2" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Turbo Mesh 2</object-name>
+        <member-data valType="String">{"DisplayText": "Turbo Mesh", "ImageName": "CFXTG", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Turbo Mesh 2", "_overwrittenUpdatable": None, "Template": $$e9aa9fa4-46ab-4ef3-aa0a-c419f74d4112, "InSystem": $$bfbe5a40-859d-4d21-9457-62c7867398cd, "MasterSources": {"Sources": [[{"DataType": "TurboGeometry", "Component": $$ac921675-5c52-49dd-aacf-11baa4e78f94, "Transfer": None}]]}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Turbo Mesh 3" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Turbo Mesh 3</object-name>
+        <member-data valType="String">{"DisplayText": "Turbo Mesh", "ImageName": "CFXTG", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Turbo Mesh 3", "_overwrittenUpdatable": None, "Template": $$e9aa9fa4-46ab-4ef3-aa0a-c419f74d4112, "InSystem": $$539ef6c0-d4ac-43b9-aa95-dfbddfb9d02f, "MasterSources": {"Sources": [[{"DataType": "TurboGeometry", "Component": $$dc9b73ab-51cb-4e09-a5ab-10af176094dd, "Transfer": None}]]}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Blade Design 3" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Blade Design 3</object-name>
+        <member-data valType="String">{"DisplayText": "Blade Design", "ImageName": "BladeGen", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Blade Design 3", "_overwrittenUpdatable": None, "Template": $$2f7a0430-4c6e-47aa-b6f5-983206b969b2, "InSystem": $$866ddb74-0089-4936-b786-5dd5fe177248, "MasterSources": {"Sources": []}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Setup 1" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Setup 1</object-name>
+        <member-data valType="String">{"DisplayText": "Setup", "ImageName": "setup", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Setup 1", "_overwrittenUpdatable": None, "Template": $$31457915-0021-44d2-9ecf-d357f99b1b0a, "InSystem": $$4b659fde-40da-4c80-aebf-6ca79730d5e0, "MasterSources": {"Sources": [[{"DataType": "CFXMesh", "Component": $$63665863-0bf0-4507-8178-639940e73210, "Transfer": None}], [{"DataType": "SimulationGeneratedMesh", "Component": $$0437e16e-7e87-46fa-a877-abfed2f7a277, "Transfer": None}], [{"DataType": "CFXMesh", "Component": $$0437e16e-7e87-46fa-a877-abfed2f7a277, "Transfer": None}], [{"DataType": "FluentTGridMesh", "Component": $$0437e16e-7e87-46fa-a877-abfed2f7a277, "Transfer": None}], [{"DataType": "MechanicalSetup", "Component": $$0437e16e-7e87-46fa-a877-abfed2f7a277, "Transfer": None}]]}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Solution 1" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Solution 1</object-name>
+        <member-data valType="String">{"DisplayText": "Solution", "ImageName": "solution", "ComponentStateOnLastFailure": "Incomplete", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Solution 1", "_overwrittenUpdatable": None, "Template": $$19045437-41f3-4bbb-9b9c-1c01640ab970, "InSystem": $$4b659fde-40da-4c80-aebf-6ca79730d5e0, "MasterSources": {"Sources": [[{"DataType": "CFXSetup", "Component": $$0437e16e-7e87-46fa-a877-abfed2f7a277, "Transfer": None}]]}, "Notes": None, "UsedLicenses": {"anshpc": 4, "cfd_base": 2, "cfd_solve_level1": 2, "cfd_solve_level2": 2}, "ActiveTransferComponents": [], "Solver": "CFX", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+      <Object Name="/Schematic/Component:Results 1" Version="1.0">
+        <class-type valType="String">Component</class-type>
+        <object-name valType="String">Results 1</object-name>
+        <member-data valType="String">{"DisplayText": "Results", "ImageName": "results", "ComponentStateOnLastFailure": "UpToDate", "AlwaysBePartOfDpUpdate": False, "FullyUpToDateOnDps": None, "CoupledClients": [], "SubComponents": [], "DataSharedFrom": None, "DataSharing": "None", "DataContainer": "Results 1", "_overwrittenUpdatable": None, "Template": $$894d6cd9-778d-456f-87ea-fd8970d12d47, "InSystem": $$4b659fde-40da-4c80-aebf-6ca79730d5e0, "MasterSources": {"Sources": [[{"DataType": "CFXSolution", "Component": $$aa55535d-1d30-4ea4-a28b-4aa80d42c702, "Transfer": None}]]}, "Notes": None, "UsedLicenses": None, "ActiveTransferComponents": [], "Solver": "", "IsFailedState": False, "UpdateConditionParameter": None}</member-data>
+      </Object>
+    </Container>
+    <Container Name="ReportDataContainer" Version="1.0">
+      <container-type valType="String">Ansys.ProjectReporting.Addin:ReportDataContainer</container-type>
+      <static-id valType="String">ReportDataContainer</static-id>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">0</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 1844, "Input": 1835, "Output": 1835}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <contains-significant-data valType="Boolean">false</contains-significant-data>
+    </Container>
+    <Container Name="Graphics" Version="1.0">
+      <container-type valType="String">Ansys.Graphics.GraphicsAddin:graphics</container-type>
+      <static-id valType="String">Graphics</static-id>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">0</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 1845, "Input": 1845, "Output": 1845}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <contains-significant-data valType="Boolean">false</contains-significant-data>
+    </Container>
+    <Container Name="Units" Version="1.0">
+      <container-type valType="String">Ansys.Units.Commands.Addin:Units</container-type>
+      <static-id valType="String">Units</static-id>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">0</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 1846, "Input": 1848, "Output": 1846}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <contains-significant-data valType="Boolean">false</contains-significant-data>
+      <Object Name="/Units/UnitSystemProjectSettings:UnitSystemProjectSettings" Version="1.0">
+        <class-type valType="String">UnitSystemProjectSettings</class-type>
+        <object-name valType="String">UnitSystemProjectSettings</object-name>
+        <member-data valType="String">{"DisplayText": "UnitSystemProjectSettings", "DataContainerUnitSystemRegistry": {}}</member-data>
+      </Object>
+      <Object Name="/Units/UnitSystem:UnitSys" Version="1.0">
+        <class-type valType="String">UnitSystem</class-type>
+        <object-name valType="String">UnitSys</object-name>
+        <member-data valType="String">{"DisplayText": "Metric (kg,m,s,°C,A,N,V)", "ChangedQuantityUnits": {}, "UnitSystemName": "MKS_STANDARD", "BaseUnitSystemName": "SI", "IsProjectUnitSystem": True, "IsDefault": False}</member-data>
+      </Object>
+    </Container>
+    <Container Name="DpdbContainer" Version="1.0">
+      <container-type valType="String">Ansys.Dpdb.DpdbAddin:DpdbContainer</container-type>
+      <static-id valType="String">DpdbContainer</static-id>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">0</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 1852, "Input": 1849, "Output": 1849}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <contains-significant-data valType="Boolean">false</contains-significant-data>
+      <Object Name="/DpdbContainer/DpdbSettings:Dpdb Settings Entity" Version="1.0">
+        <class-type valType="String">DpdbSettings</class-type>
+        <object-name valType="String">Dpdb Settings Entity</object-name>
+        <member-data valType="String">{"DisplayText": "Dpdb Settings Entity", "ServerUrl": "https://localhost/dcs", "ServerUserName": None, "ServerPassword": None, "DatabaseName": None, "StartLocalEvaluatorOnUpdate": True, "ExecutionTime": 300, "UpdateDesignPointInSteps": False}</member-data>
+      </Object>
+    </Container>
+    <Container Name="RepContainer" Version="1.0">
+      <container-type valType="String">Ansys.Rep.RepAddin:RepContainer</container-type>
+      <static-id valType="String">RepContainer</static-id>
+      <storage-scheme-id valType="String">version-1-format</storage-scheme-id>
+      <deleted-sources valType="String">[]</deleted-sources>
+      <last-updated valType="Int64">0</last-updated>
+      <last-modified-by-usage valType="String">{"Extrinsic": 1856, "Input": 1853, "Output": 1853}</last-modified-by-usage>
+      <outputs-generated-by-type valType="String">{}</outputs-generated-by-type>
+      <contains-significant-data valType="Boolean">false</contains-significant-data>
+      <Object Name="/RepContainer/RepSettings:Rep Settings Entity" Version="1.0">
+        <class-type valType="String">RepSettings</class-type>
+        <object-name valType="String">Rep Settings Entity</object-name>
+        <member-data valType="String">{"DisplayText": "Rep Settings Entity", "ServerUrl": "https://localhost:8443/rep", "ServerUserName": None, "ServerPassword": None, "ProjectId": None, "ExecutionTime": 300, "UpdateDesignPointInSteps": False}</member-data>
+      </Object>
+      <Object Name="/RepContainer/RepProjectIDMap:REP ProjectID Map Entity" Version="1.0">
+        <class-type valType="String">RepProjectIDMap</class-type>
+        <object-name valType="String">REP ProjectID Map Entity</object-name>
+        <member-data valType="String">{"DisplayText": "REP ProjectID Map Entity", "RepProjectIDMap": {}}</member-data>
+      </Object>
+    </Container>
+  </Containers>
+</Storage>
